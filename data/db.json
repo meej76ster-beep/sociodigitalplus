@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "appName": "Del chat al Agente: Go",
+    "specialist": "Esp. Maria Esther Espinoza",
+    "version": "2.0.0",
+    "repository": "https://github.com/meej76ster-beep/sociodigitalplus",
+    "createdAt": "2026-10-19T19:40:00Z"
+  },
+  "users": [
+    {
+      "id": "demo-user-1",
+      "email": "estudiante@mariaestherespinoza.com",
+      "fullName": "Estudiante Digital",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      "institution": "Firma Profesional Demo",
+      "specialty": "Legal & Contable con IA",
+      "role": "Consultor / Abogado",
+      "isPremium": false,
+      "createdAt": "2026-10-19T18:00:00Z"
+    }
+  ],
+  "progress": {
+    "demo-user-1": {
+      "userId": "demo-user-1",
+      "currentLevel": "level-1",
+      "totalProgress": 15,
+      "xp": 40,
+      "streak": 1,
+      "lastStreakDate": "2026-10-19",
+      "unlockedLevels": ["level-1"],
+      "lessonProgress": {
+        "l1-m1": {
+          "completed": true,
+          "completedAt": "2026-10-19T18:30:00Z"
+        },
+        "l1-m2": {
+          "completed": true,
+          "completedAt": "2026-10-19T18:45:00Z"
+        }
+      },
+      "assessmentAttempts": {},
+      "premiumStatus": false,
+      "updatedAt": "2026-10-19T18:45:00Z"
+    }
+  ],
+  "webinar": {
+    "title": "Socio Digital para Firmas: Copiloto Legal y Contable con IA",
+    "subtitle": "Cómo automatizar la carga documental y operativa de tu despacho o consultora con agentes inteligentes supervisados.",
+    "specialist": "Maria Esther Espinoza",
+    "date": "2026-11-17T19:00:00-05:00",
+    "registrations": [
+      {
+        "ticketId": "SD-FIRMAS-2026-1001",
+        "fullName": "Dr. Alejandro Silva",
+        "email": "alejandro@silva-abogados.com",
+        "country": "🇨🇴 Colombia",
+        "institution": "Silva & Asociados",
+        "specialty": "Legal / Despacho Jurídico",
+        "teacherRole": "Socio / Titular de Firma",
+        "aiExperience": "🥈 Uso Ocasional",
+        "aiTools": ["Análisis de Contratos", "Automatización Contable", "Confidencialidad"],
+        "speakerQuestion": "¿Cómo estructurar la confidencialidad en modelos de lenguaje para despachos de abogados?",
+        "registeredAt": "2026-10-19T19:00:00Z"
+      }
+    ]
+  }
+}
