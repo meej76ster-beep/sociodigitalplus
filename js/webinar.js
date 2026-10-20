@@ -241,6 +241,13 @@ class WebinarManager {
   }
 
   submitRegistration() {
+    const consentInput = document.getElementById("webinar-consent");
+    if (consentInput && !consentInput.checked) {
+      alert("Debes aceptar la Política de Privacidad y Tratamiento de Datos para confirmar tu inscripción.");
+      consentInput.focus();
+      return;
+    }
+
     const randomNum = Math.floor(1000 + Math.random() * 9000);
     this.formData.ticketId = `SD-FIRMAS-2026-${randomNum}`;
     this.formData.registeredAt = new Date().toISOString();

@@ -57,16 +57,16 @@
       </a>
 
       <!-- Accesos Directos -->
-      <div class="flex items-center gap-2.5 sm:gap-4">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-colors">
+          <span>🔒 Privacidad & Datos</span>
+        </button>
         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-green/10 text-brand-green border border-brand-green/30">
           <span class="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
           Acceso Gratuito
         </span>
-        <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="text-xs text-brand-cyan hover:text-white flex items-center gap-1 transition-colors font-medium">
-          <span>🌐 e-formación</span>
-        </a>
-        <a href="index.html" class="hidden sm:flex text-xs text-slate-300 hover:text-brand-green items-center gap-1 transition-colors">
-          <span>🚀 App</span>
+        <a href="index.html" class="flex text-xs text-slate-300 hover:text-brand-green items-center gap-1 transition-colors px-2.5 py-1 rounded-lg bg-slate-800/60 border border-slate-700">
+          <span>🚀 Volver a la App</span>
         </a>
       </div>
     </div>
@@ -155,7 +155,7 @@
   <!-- ==========================================================================
        SECCIÓN PRINCIPAL: FORMULARIO INTERACTIVO MULTI-PASO & LIVE TICKET PREVIEW
        ========================================================================== -->
-  <main class="max-w-4xl mx-auto px-4 pb-16 w-full flex-1">
+  <main class="max-w-4xl mx-auto px-4 pb-12 w-full flex-1">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       
@@ -255,7 +255,13 @@
               </div>
             </div>
 
-            <div class="pt-4">
+            <!-- Micro-Aviso de Seguridad en Paso 1 -->
+            <div class="flex items-center gap-2 p-2.5 bg-slate-900/60 rounded-xl border border-slate-800 text-[11px] text-slate-400">
+              <span class="text-brand-green">🔒</span>
+              <span>Tus datos corporativos están protegidos con cifrado SSL de 256 bits y no serán transferidos a terceros.</span>
+            </div>
+
+            <div class="pt-2">
               <button id="webinar-next-1" class="w-full btn-primary py-3.5 text-sm font-extrabold flex items-center justify-center gap-2">
                 <span>Siguiente: Diagnóstico IA para Firmas</span>
                 <span>→</span>
@@ -322,7 +328,22 @@
               <label class="block text-xs font-bold text-slate-300 mb-1.5">
                 3. Pregunta directa para la especialista Maria Esther Espinoza (Opcional):
               </label>
-              <textarea id="webinar-question" rows="2" placeholder="Ej: ¿Cómo garantizar la confidencialidad de la información tributaria y contractual al implementar agentes de IA en mi despacho?" class="webinar-input text-xs"></textarea>
+              <textarea id="webinar-question" rows="2" placeholder="Ej: ¿Cómo estructurar la confidencialidad de la información contable y contractual al implementar agentes de IA en mi despacho?" class="webinar-input text-xs"></textarea>
+            </div>
+
+            <!-- Cláusula Explícita de Seguridad y Consentimiento de Datos -->
+            <div class="p-3.5 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
+              <label class="flex items-start gap-2.5 cursor-pointer text-xs text-slate-300">
+                <input id="webinar-consent" type="checkbox" class="mt-0.5 rounded text-brand-green focus:ring-brand-green border-slate-700 bg-slate-800 w-4 h-4 cursor-pointer" required checked />
+                <span class="leading-relaxed">
+                  Acepto la <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-brand-cyan hover:underline font-bold inline">Política de Privacidad y Tratamiento de Datos Personales</button> conforme a la Ley 1581 de 2012 (Habeas Data) y el RGPD.
+                </span>
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 border-t border-slate-800/80 text-[10px] text-slate-400">
+                <span class="flex items-center gap-1">🔒 SSL 256 bits cifrado</span>
+                <span class="flex items-center gap-1">⚖️ Secreto profesional</span>
+                <span class="flex items-center gap-1 col-span-2 sm:col-span-1">🚫 Cero entrenamiento en IA pública</span>
+              </div>
             </div>
 
             <div class="flex items-center gap-3 pt-2">
@@ -518,12 +539,211 @@
   </main>
 
   <!-- ==========================================================================
+       SECCIÓN DE SEGURIDAD, CONFIDENCIALIDAD Y POLÍTICAS DE DATOS
+       ========================================================================== -->
+  <section class="max-w-4xl mx-auto px-4 pb-12 w-full space-y-6">
+    <div class="glass-card p-6 sm:p-8 border-t-4 border-brand-green space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+        <div class="space-y-1">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl">🛡️</span>
+            <h3 class="text-base sm:text-lg font-extrabold text-white">
+              Seguridad, Confidencialidad y Política de Tratamiento de Datos
+            </h3>
+          </div>
+          <p class="text-xs text-slate-400">
+            Garantías de protección de datos personales y corporativos para despachos jurídicos, contables y consultoras.
+          </p>
+        </div>
+        <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="btn-cyan !py-2 !px-4 text-xs font-bold whitespace-nowrap self-start sm:self-auto flex items-center gap-1.5">
+          <span>📜 Ver Política Legal Completa</span>
+        </button>
+      </div>
+
+      <!-- 3 Tarjetas de Pilares de Seguridad -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        
+        <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/40 flex items-center justify-center text-brand-green text-xl font-bold">
+            🔒
+          </div>
+          <h4 class="text-xs font-extrabold text-white">Cifrado de Grado Bancario</h4>
+          <p class="text-[11px] text-slate-300 leading-relaxed">
+            Todas las comunicaciones y envíos de formularios están asegurados mediante cifrado <strong>SSL/TLS de 256 bits</strong>. Tus datos de contacto y profesionales se transmiten por canales seguros e inviolables.
+          </p>
+        </div>
+
+        <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 border border-brand-cyan/40 flex items-center justify-center text-brand-cyan text-xl font-bold">
+            ⚖️
+          </div>
+          <h4 class="text-xs font-extrabold text-white">Secreto Profesional y No Cesión</h4>
+          <p class="text-[11px] text-slate-300 leading-relaxed">
+            Entendemos la reserva del sector legal y contable. Nos acogemos estrictamente a la <strong>Ley 1581 de 2012 (Habeas Data)</strong> y normativas internacionales (RGPD). Jamás venderemos ni cederemos tus datos a terceros.
+          </p>
+        </div>
+
+        <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center text-brand-gold text-xl font-bold">
+            🤖
+          </div>
+          <h4 class="text-xs font-extrabold text-white">Cero Entrenamiento en IA Pública</h4>
+          <p class="text-[11px] text-slate-300 leading-relaxed">
+            La información diagnóstica o consultas que ingreses <strong>nunca será utilizada para entrenar modelos públicos de lenguaje (LLMs)</strong> ni compartida en bases de conocimiento abiertas.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Cuadro Explicativo: Por Qué Pedimos Datos y Qué Hacemos con Ellos -->
+      <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+        <h4 class="text-xs font-extrabold text-brand-cyan uppercase tracking-wider flex items-center gap-2">
+          <span>📋</span> Finalidad y Destino Exclusivo de los Datos Solicitados:
+        </h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
+          <div class="flex items-start gap-2">
+            <span class="text-brand-green font-bold">✓</span>
+            <div>
+              <strong class="text-white">Generación de tu Pase Digital:</strong>
+              <p class="text-[11px] text-slate-400">Para asociar tu credencial con código QR personalizado y registrar tu asistencia formal.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-brand-green font-bold">✓</span>
+            <div>
+              <strong class="text-white">Envío del Enlace de Transmisión:</strong>
+              <p class="text-[11px] text-slate-400">Recibirás por correo el link directo a la sala en vivo de YouTube / Zoom el día del evento.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-brand-green font-bold">✓</span>
+            <div>
+              <strong class="text-white">Adaptación de Casos de Estudio:</strong>
+              <p class="text-[11px] text-slate-400">El diagnóstico nos permite enfocar los ejemplos de IA en la especialidad predominante de tu firma.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-brand-green font-bold">✓</span>
+            <div>
+              <strong class="text-white">Entrega de Materiales y Certificado:</strong>
+              <p class="text-[11px] text-slate-400">Envío posterior de plantillas de prompts, flujos de agentes supervisados y certificado de participación.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
+          <span>¿Deseas consultar, corregir o suprimir tus datos? Escríbenos a: <strong class="text-slate-300">privacidad@vl-soluciones.com</strong></span>
+          <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-brand-cyan hover:underline font-semibold">
+            Leer términos legales completos →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       MODAL INTERACTIVO: POLÍTICA COMPLETA DE TRATAMIENTO DE DATOS
+       ========================================================================== -->
+  <div id="privacy-modal" class="hidden fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4">
+    <div class="glass-card max-w-2xl w-full p-6 sm:p-8 space-y-4 animate-bounce-pop border-2 border-brand-cyan max-h-[85vh] flex flex-col">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3 flex-shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-xl bg-brand-cyan/20 border border-brand-cyan/40 flex items-center justify-center text-brand-cyan text-lg">
+            🛡️
+          </div>
+          <div>
+            <h3 class="text-sm sm:text-base font-extrabold text-white">Política de Privacidad y Tratamiento de Datos</h3>
+            <span class="text-[10px] text-slate-400">Conforme a la Ley Estatutaria 1581 de 2012 y normativas internacionales</span>
+          </div>
+        </div>
+        <button type="button" onclick="document.getElementById('privacy-modal').classList.add('hidden')" class="text-slate-400 hover:text-white text-xl p-1">✕</button>
+      </div>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="flex-1 overflow-y-auto space-y-4 text-xs text-slate-300 pr-2 leading-relaxed">
+        
+        <div>
+          <h4 class="font-bold text-white mb-1">1. Responsable del Tratamiento</h4>
+          <p class="text-slate-400">
+            El responsable del tratamiento de los datos recolectados es <strong>e-Formación / VL Soluciones</strong> en conjunto con la dirección del programa <strong>Del chat al Agente: Go</strong> a cargo de la <strong>Esp. Maria Esther Espinoza</strong>, con portal web oficial en <a href="https://e-formacion.vl-soluciones.com/" target="_blank" class="text-brand-cyan underline">https://e-formacion.vl-soluciones.com/</a>.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-1">2. Datos Solicitados y Naturaleza</h4>
+          <p class="text-slate-400">
+            A través del formulario de inscripción al Webinar Conjunto (Legal + Contable) se solicitan: nombre completo, correo electrónico corporativo, país de residencia, despacho o firma a la que pertenece, área de especialidad, rol profesional, autodiagnóstico de uso de Inteligencia Artificial y preguntas opcionales para la especialista. No se recolectan datos sensibles según la definición legal.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-1">3. Finalidades Específicas del Tratamiento</h4>
+          <ul class="list-disc pl-5 space-y-1 text-slate-400">
+            <li>Emisión, verificación y acreditación del Pase Digital Oficial para el evento.</li>
+            <li>Gestión del enlace de acceso a la transmisión privada en directo y recordatorios de inicio.</li>
+            <li>Personalización y pertinencia de los ejemplos pedagógicos durante la sesión en vivo.</li>
+            <li>Envío de material académico, guías prácticas de agentes supervisados y certificados de asistencia.</li>
+            <li>Comunicaciones informativas sobre futuras ediciones y programas formativos especializados (con opción de baja en un clic).</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-1">4. Confidencialidad y Secreto Profesional para Firmas</h4>
+          <p class="text-slate-400">
+            Reconociendo el carácter reservado de las profesiones jurídicas y contables, se garantiza que bajo ninguna circunstancia los datos suministrados serán transferidos, vendidos o cedidos a terceros con fines comerciales. Ningún dato ni consulta se utilizará para el re-entrenamiento de modelos masivos de IA comerciales.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-1">5. Medidas de Seguridad</h4>
+          <p class="text-slate-400">
+            Los datos son almacenados en infraestructura de nube segura, bajo protocolos criptográficos SSL/TLS de 256 bits y estrictas políticas de control de acceso perimetral.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white mb-1">6. Derechos del Titular (Derechos ARCO)</h4>
+          <p class="text-slate-400">
+            Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento, así como a revocar la autorización de tratamiento otorgada, mediante correo electrónico dirigido a <strong>privacidad@vl-soluciones.com</strong> con el asunto «Ejercicio de Derechos Habeas Data».
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="border-t border-slate-800 pt-3 flex items-center justify-end flex-shrink-0">
+        <button type="button" onclick="document.getElementById('privacy-modal').classList.add('hidden')" class="btn-primary text-xs py-2.5 px-6 font-bold">
+          Entendido y Aceptado
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
   <footer class="bg-slate-900 border-t border-slate-800 py-6 px-4 text-center text-xs text-slate-400">
-    <div class="max-w-4xl mx-auto space-y-2">
+    <div class="max-w-4xl mx-auto space-y-3">
+      <div class="flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-400">
+        <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="hover:text-brand-cyan transition-colors underline">
+          Política de Privacidad y Tratamiento de Datos
+        </button>
+        <span>•</span>
+        <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="hover:text-brand-cyan transition-colors">
+          Plataforma e-Formación
+        </a>
+        <span>•</span>
+        <a href="index.html" class="hover:text-brand-green transition-colors">
+          App Del chat al Agente: Go
+        </a>
+      </div>
       <p>© 2026 <strong>Socio Digital para Firmas</strong> — Desarrollado por <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="text-brand-cyan font-bold hover:underline">e-formacion.vl-soluciones.com</a>. Todos los derechos reservados.</p>
-      <p class="text-[11px] text-slate-500">Transformando la práctica legal y contable a través de Inteligencia Artificial supervisada y optimización de procesos documentales.</p>
+      <p class="text-[11px] text-slate-500">Transformando la práctica legal y contable a través de Inteligencia Artificial supervisada y optimización de procesos documentales con estricta confidencialidad.</p>
     </div>
   </footer>
 
