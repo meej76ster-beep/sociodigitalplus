@@ -43,169 +43,176 @@
   <!-- ==========================================================================
        HEADER PRINCIPAL DE NAVEGACIÓN
        ========================================================================== -->
-  <header class="sticky top-0 z-30 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-4 py-3">
-    <div class="max-w-4xl mx-auto flex items-center justify-between">
+  <header class="sticky top-0 z-30 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-4 sm:px-6 py-3.5">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
       <!-- Logo Marca -->
-      <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="flex items-center gap-2.5 group" title="Ir a e-formacion.vl-soluciones.com">
+      <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="flex items-center gap-3 group" title="Ir a e-formacion.vl-soluciones.com">
         <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-green to-brand-cyan flex items-center justify-center font-extrabold text-white text-base shadow-md group-hover:scale-105 transition-transform">
           SD
         </div>
         <div>
-          <h1 class="text-xs sm:text-sm font-bold text-white leading-none">SOCIO DIGITAL</h1>
-          <span class="text-[10px] text-brand-cyan font-semibold tracking-wide">e-formacion.vl-soluciones.com</span>
+          <div class="flex items-center gap-2">
+            <h1 class="text-xs sm:text-sm font-bold text-white leading-none">SOCIO DIGITAL PARA FIRMAS</h1>
+            <span class="hidden md:inline-block text-[10px] text-brand-cyan font-bold bg-brand-cyan/15 px-2 py-0.5 rounded-full border border-brand-cyan/30">Legal + Contable</span>
+          </div>
+          <span class="text-[11px] text-slate-400 font-medium">e-formacion.vl-soluciones.com</span>
         </div>
       </a>
 
       <!-- Accesos Directos -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold text-slate-400 hover:text-white border border-slate-800 hover:border-slate-700 transition-colors">
-          <span>🔒 Privacidad & Datos</span>
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <div class="hidden lg:flex items-center gap-1.5 text-xs text-slate-300 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-800">
+          <span>📅</span>
+          <span><strong>Martes 17 de Noviembre</strong> • 19:00 Hs (Colombia)</span>
+        </div>
+        <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white bg-slate-900/80 border border-slate-700 hover:border-brand-cyan transition-colors">
+          <span>🔒 Privacidad</span>
         </button>
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-green/10 text-brand-green border border-brand-green/30">
-          <span class="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
-          Acceso Gratuito
-        </span>
-        <a href="index.html" class="flex text-xs text-slate-300 hover:text-brand-green items-center gap-1 transition-colors px-2.5 py-1 rounded-lg bg-slate-800/60 border border-slate-700">
-          <span>🚀 Volver a la App</span>
+        <a href="index.html" class="inline-flex text-xs text-brand-green hover:text-white items-center gap-1.5 transition-colors px-3 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/30 hover:bg-brand-green/20 font-bold">
+          <span>🚀 Ir a la App</span>
         </a>
       </div>
     </div>
   </header>
 
   <!-- ==========================================================================
-       HERO BANNER & CUENTA REGRESIVA
+       HERO BANNER & CUENTA REGRESIVA (ANCHO OPTIMIZADO MAX-W-6XL)
        ========================================================================== -->
-  <section class="max-w-4xl mx-auto px-4 py-8 sm:py-10 w-full space-y-6">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-6 w-full space-y-6">
     
-    <!-- Tag & Status Bar -->
-    <div class="flex flex-wrap items-center justify-between gap-3">
-      <div class="live-badge">
-        <span class="live-dot"></span> EN VIVO EN DÍAS
-      </div>
-      <div class="text-xs font-medium text-slate-300 bg-slate-900/80 px-3.5 py-1.5 rounded-full border border-slate-800 shadow-sm">
-        📅 <strong>Martes 17 de Noviembre</strong> • 19:00 Hs (Colombia / GMT-5)
-      </div>
-    </div>
-
-    <!-- Banner Principal con Imagen de Banner Generada -->
+    <!-- Banner Principal con Imagen de Banner Oficial -->
     <div class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl group">
-      <img src="assets/webinar_banner.jpg" alt="Socio Digital para Firmas: Copiloto Legal y Contable con IA" class="w-full h-56 sm:h-80 object-cover object-center transform group-hover:scale-105 transition-transform duration-700" />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent flex flex-col justify-end p-6 sm:p-8">
-        <div class="space-y-2.5">
-          <div class="flex flex-wrap gap-2">
+      <img src="assets/webinar_banner.jpg" alt="Socio Digital para Firmas: Copiloto Legal y Contable con IA" class="w-full h-64 sm:h-80 md:h-96 object-cover object-center transform group-hover:scale-105 transition-transform duration-700" />
+      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/20 flex flex-col justify-end p-6 sm:p-10">
+        <div class="space-y-3 max-w-4xl">
+          <div class="flex flex-wrap items-center gap-2">
             <span class="bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
               Webinar Conjunto (Legal + Contable)
             </span>
-            <span class="bg-brand-green/20 text-brand-green border border-brand-green/40 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+            <span class="bg-brand-green/20 text-brand-green border border-brand-green/40 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
               Online en Vivo
             </span>
+            <span class="text-xs text-slate-300 bg-slate-900/90 border border-slate-700 px-3 py-1 rounded-full font-semibold">
+              📅 Martes 17 de Noviembre • 19:00 Hs Colombia (GMT-5)
+            </span>
           </div>
-          <h1 class="text-2xl sm:text-4xl font-extrabold text-white leading-tight">
+
+          <h1 class="text-2xl sm:text-4xl md:text-5xl font-black text-white leading-tight">
             Socio Digital para Firmas: Copiloto Legal y Contable con IA
           </h1>
-          <p class="text-xs sm:text-sm text-slate-200 max-w-2xl leading-relaxed">
+
+          <p class="text-sm sm:text-base text-slate-200 leading-relaxed font-medium">
             Cómo automatizar la carga documental y operativa de tu despacho o consultora con agentes inteligentes supervisados.
           </p>
+
+          <!-- Propuesta de Valor Oficial -->
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-900/90 border border-brand-cyan/40 flex items-start gap-3 backdrop-blur-md">
+            <div class="w-8 h-8 rounded-lg bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-lg flex-shrink-0 mt-0.5">
+              ⚖️
+            </div>
+            <div>
+              <span class="text-[11px] font-black text-brand-cyan uppercase tracking-wider block">Por qué funciona:</span>
+              <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
+                Agrupa a ambos colectivos bajo la necesidad compartida de <strong>confidencialidad, análisis normativo y optimización de tiempo administrativo</strong>.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Tarjeta "Por qué funciona" (Propuesta de valor clave) -->
-    <div class="glass-card p-4 sm:p-5 border-l-4 border-brand-cyan flex items-start gap-3.5 bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-900/90 shadow-lg">
-      <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 border border-brand-cyan/40 text-brand-cyan flex items-center justify-center text-xl flex-shrink-0 mt-0.5">
-        ⚖️
-      </div>
-      <div class="space-y-1">
-        <div class="text-xs font-bold text-brand-cyan uppercase tracking-wider flex items-center gap-1.5">
-          <span>💡 Por qué funciona esta sesión conjunta:</span>
+    <!-- Barra de Cuenta Regresiva & Metadatos Rápidos -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+      
+      <!-- Reloj de Cuenta Regresiva (7 Cols) -->
+      <div class="md:col-span-7 glass-card p-4 sm:p-5 border-l-4 border-brand-green flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+        <div>
+          <div class="text-[11px] text-slate-400 uppercase tracking-widest font-bold flex items-center gap-1.5">
+            <span>⏱️</span> El Webinar en Vivo Comienza en:
+          </div>
+          <span class="text-xs text-slate-300">Sala en directo con acceso interactivo</span>
         </div>
-        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed">
-          Agrupa a ambos colectivos bajo la necesidad compartida de <strong>confidencialidad, análisis normativo y optimización de tiempo administrativo</strong>. Aprende a delegar el trabajo repetitivo en agentes IA supervisados manteniendo siempre el rigor ético, legal y la supervisión profesional humana.
-        </p>
+        <div class="grid grid-cols-4 gap-2 sm:gap-3 text-center">
+          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="cd-days" class="text-lg sm:text-2xl font-black text-brand-green block leading-tight">00</span>
+            <span class="text-[9px] text-slate-400 uppercase font-semibold">Días</span>
+          </div>
+          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="cd-hours" class="text-lg sm:text-2xl font-black text-brand-cyan block leading-tight">00</span>
+            <span class="text-[9px] text-slate-400 uppercase font-semibold">Horas</span>
+          </div>
+          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="cd-mins" class="text-lg sm:text-2xl font-black text-brand-gold block leading-tight">00</span>
+            <span class="text-[9px] text-slate-400 uppercase font-semibold">Mins</span>
+          </div>
+          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
+            <span id="cd-secs" class="text-lg sm:text-2xl font-black text-brand-magenta block leading-tight">00</span>
+            <span class="text-[9px] text-slate-400 uppercase font-semibold">Segs</span>
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Reloj de Cuenta Regresiva -->
-    <div class="glass-card p-4 sm:p-6 text-center border-l-4 border-brand-green">
-      <div class="text-xs text-slate-400 uppercase tracking-widest font-bold mb-3">
-        ⏱️ El Webinar en Vivo Comienza en:
-      </div>
-      <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-md mx-auto">
-        <div class="p-2 sm:p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-          <span id="cd-days" class="text-xl sm:text-3xl font-black text-brand-green">00</span>
-          <span class="block text-[10px] text-slate-400 font-semibold uppercase mt-0.5">Días</span>
+      <!-- Especialista Badge (5 Cols) -->
+      <div class="md:col-span-5 glass-card p-4 sm:p-5 border-l-4 border-brand-cyan flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-cyan to-brand-green p-0.5 flex-shrink-0">
+          <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-xl font-bold text-white">
+            👩‍💼
+          </div>
         </div>
-        <div class="p-2 sm:p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-          <span id="cd-hours" class="text-xl sm:text-3xl font-black text-brand-cyan">00</span>
-          <span class="block text-[10px] text-slate-400 font-semibold uppercase mt-0.5">Horas</span>
-        </div>
-        <div class="p-2 sm:p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-          <span id="cd-mins" class="text-xl sm:text-3xl font-black text-brand-gold">00</span>
-          <span class="block text-[10px] text-slate-400 font-semibold uppercase mt-0.5">Mins</span>
-        </div>
-        <div class="p-2 sm:p-3 bg-slate-900/80 rounded-2xl border border-slate-800">
-          <span id="cd-secs" class="text-xl sm:text-3xl font-black text-brand-magenta">00</span>
-          <span class="block text-[10px] text-slate-400 font-semibold uppercase mt-0.5">Segs</span>
+        <div class="min-w-0">
+          <span class="text-[10px] text-brand-cyan font-extrabold uppercase tracking-wider block">Especialista Invitada</span>
+          <h3 class="text-sm font-bold text-white leading-tight">Maria Esther Espinoza</h3>
+          <p class="text-xs text-slate-400 truncate">Esp. en gestión de procesos con IA</p>
         </div>
       </div>
+
     </div>
 
   </section>
 
   <!-- ==========================================================================
-       SECCIÓN PRINCIPAL: FORMULARIO INTERACTIVO MULTI-PASO & LIVE TICKET PREVIEW
+       SECCIÓN PRINCIPAL DE REGISTRO & INFORMACIÓN (BALANCEADA 2 COLUMNAS)
        ========================================================================== -->
-  <main class="max-w-4xl mx-auto px-4 pb-12 w-full flex-1">
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 w-full flex-1">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       
       <!-- COLUMNA IZQUIERDA: FORMULARIO DE INSCRIPCIÓN (7 Cols) -->
-      <div class="lg:col-span-7 space-y-6">
+      <div class="lg:col-span-7">
         
-        <div class="glass-card p-6 sm:p-8 relative">
+        <!-- Tarjeta del Formulario -->
+        <div id="webinar-form-container" class="glass-card p-6 sm:p-8 space-y-5">
           
-          <!-- Encabezado del Formulario -->
-          <div class="mb-6">
+          <div>
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold text-brand-green uppercase tracking-wider">Inscripción Oficial</span>
+              <span class="text-[11px] text-slate-400">Cupos Limitados</span>
+            </div>
             <h2 class="text-xl sm:text-2xl font-extrabold text-white">Reserva tu Lugar Gratuito</h2>
-            <p class="text-xs sm:text-sm text-slate-400 mt-1">Completa tu registro para recibir tu Pase Digital Oficial y acceso directo a la sala en vivo.</p>
+            <p class="text-xs sm:text-sm text-slate-400 mt-1">
+              Completa tus datos profesionales para generar tu Pase Digital y recibir el enlace de acceso directo.
+            </p>
           </div>
 
-          <!-- Stepper de Progreso -->
-          <div id="webinar-stepper-bar" class="flex items-center justify-between mb-8 pb-4 border-b border-slate-800">
-            <div id="stepper-indicator-1" class="stepper-item active">
-              <div class="stepper-circle">1</div>
-              <span class="text-[11px] font-semibold mt-1 text-slate-300">Perfil Firma</span>
-              <div class="stepper-line"></div>
-            </div>
-            <div id="stepper-indicator-2" class="stepper-item">
-              <div class="stepper-circle">2</div>
-              <span class="text-[11px] font-semibold mt-1 text-slate-400">Diagnóstico IA</span>
-              <div class="stepper-line"></div>
-            </div>
-            <div id="stepper-indicator-3" class="stepper-item">
-              <div class="stepper-circle">3</div>
-              <span class="text-[11px] font-semibold mt-1 text-slate-400">Pase Digital</span>
-            </div>
-          </div>
-
-          <!-- PASO 1: DATOS PERSONALES Y PROFESIONALES -->
-          <div id="webinar-step-1" class="space-y-4">
+          <form id="webinar-direct-form" onsubmit="event.preventDefault(); webinarManager.submitRegistration();" class="space-y-4">
             
-            <div>
-              <label class="block text-xs font-bold text-slate-300 mb-1.5">Nombre y Apellido *</label>
-              <input id="webinar-name" type="text" placeholder="Ej: Dr. Alejandro Silva" class="webinar-input" required />
-            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-300 mb-1.5">Nombre y Apellido *</label>
+                <input id="webinar-name" type="text" placeholder="Ej: Dr. Alejandro Silva" class="webinar-input" required />
+              </div>
 
-            <div>
-              <label class="block text-xs font-bold text-slate-300 mb-1.5">Correo Electrónico Corporativo *</label>
-              <input id="webinar-email" type="email" placeholder="tu.nombre@tu-firma.com" class="webinar-input" required />
-              <p class="text-[10px] text-slate-500 mt-1">Aquí recibirás el enlace de transmisión en vivo y tu credencial digital.</p>
+              <div>
+                <label class="block text-xs font-bold text-slate-300 mb-1.5">Correo Electrónico Corporativo *</label>
+                <input id="webinar-email" type="email" placeholder="tu.nombre@tu-firma.com" class="webinar-input" required />
+              </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-xs font-bold text-slate-300 mb-1.5">País *</label>
-                <select id="webinar-country" class="webinar-input">
+                <select id="webinar-country" class="webinar-input" required>
                   <option value="🇨🇴 Colombia" selected>🇨🇴 Colombia</option>
                   <option value="🇦🇷 Argentina">🇦🇷 Argentina</option>
                   <option value="🇲🇽 México">🇲🇽 México</option>
@@ -223,29 +230,29 @@
               </div>
 
               <div>
-                <label class="block text-xs font-bold text-slate-300 mb-1.5">Despacho, Firma o Empresa *</label>
-                <input id="webinar-institution" type="text" placeholder="Ej: Silva & Asociados Abogados / Asesoría Contable" class="webinar-input" />
+                <label class="block text-xs font-bold text-slate-300 mb-1.5">Despacho, Firma o Consultora *</label>
+                <input id="webinar-institution" type="text" placeholder="Ej: Silva & Asociados / Asesoría Contable" class="webinar-input" required />
               </div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label class="block text-xs font-bold text-slate-300 mb-1.5">Área / Especialidad</label>
-                <select id="webinar-level" class="webinar-input">
+                <label class="block text-xs font-bold text-slate-300 mb-1.5">Área / Especialidad *</label>
+                <select id="webinar-level" class="webinar-input" required>
                   <option value="Legal / Jurídico">⚖️ Legal / Despacho Jurídico</option>
                   <option value="Contable / Tributario">📊 Contable / Asesoría Tributaria</option>
-                  <option value="Firma Conjunta (Legal + Contable)">🏛️ Firma Multidisciplinar (Legal + Contable)</option>
+                  <option value="Firma Conjunta (Legal + Contable)" selected>🏛️ Firma Multidisciplinar (Legal + Contable)</option>
                   <option value="Auditoría / Revisoría Fiscal">🔍 Auditoría / Revisoría Fiscal</option>
-                  <option value="Consultoría Financiera">💼 Consultoría Financiera y Negocios</option>
+                  <option value="Consultoría Financiera">💼 Consultoría Financiera / Negocios</option>
                   <option value="Notaría / Compliance">📜 Notaría / Cumplimiento / Compliance</option>
                   <option value="Otro Sector Profesional">🌐 Otro Sector Profesional</option>
                 </select>
               </div>
 
               <div>
-                <label class="block text-xs font-bold text-slate-300 mb-1.5">Rol Principal en la Firma</label>
-                <select id="webinar-role" class="webinar-input">
-                  <option value="Socio / Titular de Firma">Socio / Titular de Firma</option>
+                <label class="block text-xs font-bold text-slate-300 mb-1.5">Rol en la Firma *</label>
+                <select id="webinar-role" class="webinar-input" required>
+                  <option value="Socio / Titular de Firma" selected>Socio / Titular de Firma</option>
                   <option value="Abogado / Consultor Legal">Abogado / Consultor Legal</option>
                   <option value="Contador Público / Especialista Fiscal">Contador Público / Especialista Fiscal</option>
                   <option value="Director de Operaciones / Finanzas">Director de Operaciones / Finanzas</option>
@@ -255,194 +262,182 @@
               </div>
             </div>
 
-            <!-- Micro-Aviso de Seguridad en Paso 1 -->
-            <div class="flex items-center gap-2 p-2.5 bg-slate-900/60 rounded-xl border border-slate-800 text-[11px] text-slate-400">
-              <span class="text-brand-green">🔒</span>
-              <span>Tus datos corporativos están protegidos con cifrado SSL de 256 bits y no serán transferidos a terceros.</span>
-            </div>
-
-            <div class="pt-2">
-              <button id="webinar-next-1" class="w-full btn-primary py-3.5 text-sm font-extrabold flex items-center justify-center gap-2">
-                <span>Siguiente: Diagnóstico IA para Firmas</span>
-                <span>→</span>
-              </button>
-            </div>
-          </div>
-
-          <!-- PASO 2: DIAGNÓSTICO IA & INTERESES -->
-          <div id="webinar-step-2" class="hidden space-y-5">
-            
-            <div>
-              <label class="block text-xs font-bold text-slate-300 mb-2">
-                1. ¿Cuál es el nivel actual de adopción de IA en tu despacho o consultora?
-              </label>
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                <div class="option-card ai-exp-option" data-exp="🥉 Principiante / Curioso">
-                  <span class="text-xl">🥉</span>
-                  <div>
-                    <div class="text-xs font-bold text-white">Principiante / Curioso</div>
-                    <div class="text-[10px] text-slate-400">Sin adopción formal aún en la firma</div>
-                  </div>
-                </div>
-                <div class="option-card ai-exp-option selected" data-exp="🥈 Uso Ocasional">
-                  <span class="text-xl">🥈</span>
-                  <div>
-                    <div class="text-xs font-bold text-white">Uso Ocasional</div>
-                    <div class="text-[10px] text-slate-400">Consultas en ChatGPT/Claude para redacción</div>
-                  </div>
-                </div>
-                <div class="option-card ai-exp-option" data-exp="🥇 En Integración">
-                  <span class="text-xl">🥇</span>
-                  <div>
-                    <div class="text-xs font-bold text-white">En Integración</div>
-                    <div class="text-[10px] text-slate-400">Análisis preliminar de documentos o balances</div>
-                  </div>
-                </div>
-                <div class="option-card ai-exp-option" data-exp="🚀 Automatización Avanzada">
-                  <span class="text-xl">🚀</span>
-                  <div>
-                    <div class="text-xs font-bold text-white">Automatización Avanzada</div>
-                    <div class="text-[10px] text-slate-400">Flujos con agentes IA supervisados</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <label class="block text-xs font-bold text-slate-300 mb-2">
-                2. Áreas y herramientas que más te interesa automatizar con IA:
-              </label>
-              <div class="flex flex-wrap gap-2">
-                <span class="tag-chip ai-tool-chip active" data-tool="Análisis de Contratos">⚖️ Análisis de Contratos & Normas</span>
-                <span class="tag-chip ai-tool-chip active" data-tool="Automatización Contable">📊 Automatización Contable & Balances</span>
-                <span class="tag-chip ai-tool-chip active" data-tool="OCR Masivo">📑 Extracción Masiva Documental / OCR</span>
-                <span class="tag-chip ai-tool-chip active" data-tool="Confidencialidad">🔒 Confidencialidad & Secreto Profesional</span>
-                <span class="tag-chip ai-tool-chip" data-tool="Agentes Supervisados">🤖 Agentes IA Supervisados</span>
-                <span class="tag-chip ai-tool-chip" data-tool="Búsqueda Jurídica">🔍 Búsqueda Jurisprudencial / Tributaria</span>
-                <span class="tag-chip ai-tool-chip" data-tool="Optimización Tiempos">⏱️ Reducción de Tiempos Administrativos</span>
-                <span class="tag-chip ai-tool-chip" data-tool="Copiloto Clientes">💬 Asistente IA para Clientes</span>
-              </div>
-            </div>
-
             <div>
               <label class="block text-xs font-bold text-slate-300 mb-1.5">
-                3. Pregunta directa para la especialista Maria Esther Espinoza (Opcional):
+                Pregunta para Maria Esther Espinoza (Opcional):
               </label>
-              <textarea id="webinar-question" rows="2" placeholder="Ej: ¿Cómo estructurar la confidencialidad de la información contable y contractual al implementar agentes de IA en mi despacho?" class="webinar-input text-xs"></textarea>
+              <textarea id="webinar-question" rows="2" placeholder="¿Qué inquietud o proceso documental quisieras consultar en la sesión en vivo?" class="webinar-input text-xs"></textarea>
             </div>
 
-            <!-- Cláusula Explícita de Seguridad y Consentimiento de Datos -->
+            <!-- Cláusula de Privacidad y Consentimiento de Datos -->
             <div class="p-3.5 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
               <label class="flex items-start gap-2.5 cursor-pointer text-xs text-slate-300">
                 <input id="webinar-consent" type="checkbox" class="mt-0.5 rounded text-brand-green focus:ring-brand-green border-slate-700 bg-slate-800 w-4 h-4 cursor-pointer" required checked />
                 <span class="leading-relaxed">
-                  Acepto la <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-brand-cyan hover:underline font-bold inline">Política de Privacidad y Tratamiento de Datos Personales</button> conforme a la Ley 1581 de 2012 (Habeas Data) y el RGPD.
+                  Acepto el tratamiento de mis datos personales para la emisión de mi Pase Digital y comunicaciones del evento, conforme a la <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-brand-cyan hover:underline font-bold inline">Política de Privacidad y Tratamiento de Datos</button> (Ley 1581 / Habeas Data / RGPD).
                 </span>
               </label>
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-1 border-t border-slate-800/80 text-[10px] text-slate-400">
-                <span class="flex items-center gap-1">🔒 SSL 256 bits cifrado</span>
+              <div class="flex flex-wrap items-center gap-3 pt-1 border-t border-slate-800 text-[10px] text-slate-400">
+                <span class="flex items-center gap-1">🔒 SSL 256 bits</span>
                 <span class="flex items-center gap-1">⚖️ Secreto profesional</span>
-                <span class="flex items-center gap-1 col-span-2 sm:col-span-1">🚫 Cero entrenamiento en IA pública</span>
+                <span class="flex items-center gap-1">🚫 No cesión de datos</span>
+                <span class="flex items-center gap-1">✉️ Contacto: epartnerclass@gmail.com</span>
               </div>
             </div>
 
-            <div class="flex items-center gap-3 pt-2">
-              <button id="webinar-prev-2" class="btn-cyan !py-3 !px-5 text-xs">
-                ← Volver
-              </button>
-              <button id="webinar-submit-btn" class="flex-1 btn-primary py-3.5 text-sm font-extrabold shadow-xl">
-                🚀 CONFIRMAR INSCRIPCIÓN Y OBTENER PASE
-              </button>
-            </div>
+            <button type="submit" id="webinar-submit-btn" class="w-full btn-primary py-4 text-sm font-black flex items-center justify-center gap-2 shadow-xl shadow-brand-green/20">
+              <span>🚀 CONFIRMAR INSCRIPCIÓN Y OBTENER PASE DIGITAL</span>
+            </button>
+          </form>
+
+        </div>
+
+        <!-- Tarjeta de Pase Digital Confirmado (Se muestra al completar) -->
+        <div id="webinar-step-confirmation" class="hidden glass-card p-6 sm:p-8 space-y-6 text-center">
+          
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 border border-brand-green/40 text-brand-green text-xs font-bold">
+            <span>🎉 ¡INSCRIPCIÓN CONFIRMADA EXITOSAMENTE!</span>
           </div>
 
-          <!-- PASO 4: CONFIRMACIÓN Y CREDENCIAL DIGITAL FINAL -->
-          <div id="webinar-step-confirmation" class="hidden space-y-6 text-center">
-            
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 border border-brand-green/40 text-brand-green text-xs font-bold">
-              <span>🎉 ¡INSCRIPCIÓN CONFIRMADA EXITOSAMENTE!</span>
-            </div>
-
+          <div>
             <h3 class="text-xl sm:text-2xl font-black text-white">
-              ¡Tu Pase Digital para el Webinar está Listo!
+              ¡Tu Pase Digital Oficial está Listo!
             </h3>
+            <p class="text-xs text-slate-400 mt-1">Guarda tu credencial y agrega el evento a tu calendario.</p>
+          </div>
 
-            <!-- CREDENCIAL DIGITAL INTERACTIVA FINAL -->
-            <div class="ticket-card p-6 text-left relative max-w-sm mx-auto my-4">
-              <div class="ticket-notch-left"></div>
-              <div class="ticket-notch-right"></div>
+          <!-- Credencial Digital Interactiva -->
+          <div class="ticket-card p-6 text-left relative max-w-sm mx-auto my-4 shadow-2xl">
+            <div class="ticket-notch-left"></div>
+            <div class="ticket-notch-right"></div>
 
-              <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
-                <div class="flex items-center gap-2">
-                  <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-green to-brand-cyan flex items-center justify-center font-bold text-white text-xs">
-                    SD
-                  </div>
-                  <div>
-                    <span class="text-[9px] font-bold text-slate-400 block leading-none">e-formacion.vl-soluciones.com</span>
-                    <span class="text-xs font-extrabold text-brand-green">PASE OFICIAL WEBINAR</span>
-                  </div>
+            <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+              <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-green to-brand-cyan flex items-center justify-center font-bold text-white text-xs">
+                  SD
                 </div>
-                <div class="text-right">
-                  <span id="final-ticket-id" class="font-mono text-xs text-brand-cyan font-bold block">#SD-FIRMAS-2026-8492</span>
-                  <span class="text-[9px] text-slate-400 uppercase">Acceso Confirmado</span>
-                </div>
-              </div>
-
-              <div class="space-y-2 mb-4">
-                <h4 id="final-ticket-name" class="text-lg font-black text-white leading-tight">Dr. Alejandro Silva</h4>
-                <p id="final-ticket-institution" class="text-xs text-brand-cyan font-semibold">Socio Titular • Silva & Asociados</p>
-                <p id="final-ticket-email" class="text-[11px] text-slate-400 truncate">alejandro@silva-abogados.com</p>
-              </div>
-
-              <div class="ticket-dashed-line"></div>
-
-              <div class="flex items-center justify-between pt-1">
                 <div>
-                  <div class="text-[9px] text-slate-400 uppercase font-semibold">Adopción IA Decl.</div>
-                  <div id="final-ticket-exp" class="text-xs font-bold text-brand-gold mt-0.5">🥈 Uso Ocasional</div>
+                  <span class="text-[9px] font-bold text-slate-400 block leading-none">e-formacion.vl-soluciones.com</span>
+                  <span class="text-xs font-extrabold text-brand-green">PASE OFICIAL WEBINAR</span>
                 </div>
-                <div class="bg-white p-1.5 rounded-lg shadow-md">
-                  <canvas id="ticket-qr-canvas" width="60" height="60" class="block"></canvas>
-                </div>
+              </div>
+              <div class="text-right">
+                <span id="final-ticket-id" class="font-mono text-xs text-brand-cyan font-bold block">#SD-FIRMAS-2026-8492</span>
+                <span class="text-[9px] text-slate-400 uppercase">Confirmado</span>
               </div>
             </div>
 
-            <!-- Botones de Acción Post-Inscripción -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto pt-2">
-              <button id="btn-download-ics" class="btn-cyan text-xs font-bold py-3 flex items-center justify-center gap-2">
-                <span>📅 Agregar a mi Calendario (.ics)</span>
-              </button>
-              <button id="btn-share-whatsapp" class="btn-primary text-xs font-bold py-3 flex items-center justify-center gap-2">
-                <span>💬 Compartir en WhatsApp</span>
-              </button>
+            <div class="space-y-1.5 mb-4">
+              <h4 id="final-ticket-name" class="text-lg font-black text-white leading-tight">Dr. Alejandro Silva</h4>
+              <p id="final-ticket-institution" class="text-xs text-brand-cyan font-semibold">Socio Titular • Silva & Asociados</p>
+              <p id="final-ticket-email" class="text-[11px] text-slate-400 truncate">alejandro@silva-abogados.com</p>
             </div>
 
-            <div class="pt-4 border-t border-slate-800">
-              <button id="btn-edit-registration" class="text-xs text-slate-400 hover:text-white underline">
-                Editar mis datos de inscripción
-              </button>
+            <div class="ticket-dashed-line"></div>
+
+            <div class="flex items-center justify-between pt-1">
+              <div>
+                <div class="text-[9px] text-slate-400 uppercase font-semibold">Webinar En Vivo</div>
+                <div class="text-xs font-bold text-brand-gold mt-0.5">Martes 17 Nov • 19:00 Hs</div>
+              </div>
+              <div class="bg-white p-1.5 rounded-lg shadow-md">
+                <canvas id="ticket-qr-canvas" width="60" height="60" class="block"></canvas>
+              </div>
             </div>
           </div>
 
+          <!-- Botones de Acción Post-Inscripción -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto pt-2">
+            <button id="btn-download-ics" class="btn-cyan text-xs font-bold py-3 flex items-center justify-center gap-2">
+              <span>📅 Agregar a mi Calendario (.ics)</span>
+            </button>
+            <button id="btn-share-whatsapp" class="btn-primary text-xs font-bold py-3 flex items-center justify-center gap-2">
+              <span>💬 Compartir en WhatsApp</span>
+            </button>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800">
+            <button id="btn-edit-registration" class="text-xs text-slate-400 hover:text-white underline">
+              Editar mis datos de inscripción
+            </button>
+          </div>
         </div>
 
       </div>
 
-      <!-- COLUMNA DERECHA: LIVE TICKET PREVIEW, ESPECIALISTA Y EJES (5 Cols) -->
+      <!-- COLUMNA DERECHA: INFORMACIÓN OFICIAL & LIVE PREVIEW (5 Cols) -->
       <div class="lg:col-span-5 space-y-6">
         
-        <!-- Tarjeta de Live Preview del Pase mientras escribe -->
-        <div class="glass-card p-5 border-t-4 border-brand-cyan space-y-3">
-          <div class="flex items-center justify-between text-xs text-slate-400">
-            <span class="font-bold flex items-center gap-1.5 text-brand-cyan">
-              <span>🎟️</span> Vista Previa de tu Pase
+        <!-- Tarjeta de Detalles Oficiales del Webinar -->
+        <div class="glass-card p-6 border-t-4 border-brand-cyan space-y-4">
+          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+            <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider flex items-center gap-1.5">
+              <span>📋</span> Ficha Técnica del Evento
             </span>
-            <span class="text-[10px] text-slate-500 uppercase">Actualización en vivo</span>
+            <span class="text-[10px] text-brand-green font-semibold bg-brand-green/10 px-2 py-0.5 rounded-full border border-brand-green/30">100% Gratuito</span>
+          </div>
+
+          <div class="space-y-3 text-xs">
+            <div>
+              <span class="text-slate-400 text-[11px] block">Título:</span>
+              <strong class="text-white text-sm block leading-tight">Socio Digital para Firmas: Copiloto Legal y Contable con IA</strong>
+            </div>
+
+            <div>
+              <span class="text-slate-400 text-[11px] block">Subtítulo Comercial:</span>
+              <p class="text-slate-300 leading-relaxed">
+                Cómo automatizar la carga documental y operativa de tu despacho o consultora con agentes inteligentes supervisados.
+              </p>
+            </div>
+
+            <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1">
+              <span class="text-[11px] font-bold text-brand-cyan block">Por qué funciona:</span>
+              <p class="text-slate-300 leading-relaxed">
+                Agrupa a ambos colectivos bajo la necesidad compartida de confidencialidad, análisis normativo y optimización de tiempo administrativo.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 pt-1 text-[11px]">
+              <div class="p-2.5 bg-slate-900/60 rounded-xl border border-slate-800">
+                <span class="text-slate-400 block text-[10px]">🎙️ Especialista</span>
+                <strong class="text-white">Maria Esther Espinoza</strong>
+                <span class="block text-slate-400 text-[10px]">Esp. en gestión de procesos con IA</span>
+              </div>
+              <div class="p-2.5 bg-slate-900/60 rounded-xl border border-slate-800">
+                <span class="text-slate-400 block text-[10px]">📅 Fecha y Hora</span>
+                <strong class="text-brand-gold">Martes 17 de Noviembre</strong>
+                <span class="block text-slate-400 text-[10px]">19:00 Hs (Colombia / GMT-5)</span>
+              </div>
+            </div>
+
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
+              <span class="text-slate-400">Plataforma:</span>
+              <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="text-brand-cyan hover:underline font-bold">
+                e-formacion.vl-soluciones.com ↗
+              </a>
+            </div>
+
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="text-slate-400">Contacto y Privacidad:</span>
+              <a href="mailto:epartnerclass@gmail.com" class="text-slate-300 hover:text-white font-mono">
+                epartnerclass@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta de Live Preview del Pase mientras escribe -->
+        <div class="glass-card p-5 border-t-4 border-brand-green space-y-3">
+          <div class="flex items-center justify-between text-xs text-slate-400">
+            <span class="font-bold flex items-center gap-1.5 text-brand-green">
+              <span>🎟️</span> Vista Previa en Vivo de tu Pase
+            </span>
+            <span class="text-[10px] text-slate-500 uppercase">Tiempo real</span>
           </div>
 
           <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
             <div class="flex items-center gap-3">
-              <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-green via-brand-cyan to-brand-magenta p-0.5 flex-shrink-0">
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-green via-brand-cyan to-brand-gold p-0.5 flex-shrink-0">
                 <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-lg font-bold text-white">
                   ⚖️
                 </div>
@@ -456,82 +451,6 @@
           </div>
         </div>
 
-        <!-- Especialista Invitada Destacada -->
-        <div class="glass-card p-5 space-y-4">
-          <h3 class="text-sm font-bold text-white flex items-center gap-2">
-            <span>🎙️</span> Especialista Principal
-          </h3>
-
-          <div class="p-3.5 bg-slate-900/70 rounded-2xl border border-slate-800 space-y-2.5">
-            <div class="flex items-center gap-3">
-              <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-brand-cyan to-brand-green p-0.5 flex-shrink-0">
-                <div class="w-full h-full bg-slate-950 rounded-full flex items-center justify-center text-xl font-bold text-white">
-                  👩‍💼
-                </div>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold text-white">Maria Esther Espinoza</h4>
-                <span class="inline-block px-2 py-0.5 rounded text-[10px] font-semibold bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/30 mt-0.5">
-                  Esp. en gestión de procesos con IA
-                </span>
-              </div>
-            </div>
-            <p class="text-xs text-slate-300 leading-relaxed">
-              Especialista en reingeniería y automatización de procesos operativos mediante agentes de IA. Experta en acompañar despachos jurídicos, contables y consultoras en la transición hacia flujos de trabajo inteligentes con estricta supervisión humana y confidencialidad.
-            </p>
-          </div>
-
-          <!-- Agente Copiloto Demostración -->
-          <div class="flex items-center gap-3 p-3 bg-slate-900/50 rounded-xl border border-slate-800">
-            <div class="w-10 h-10 rounded-full bg-brand-magenta/20 border border-brand-magenta flex items-center justify-center text-lg flex-shrink-0">
-              🤖
-            </div>
-            <div>
-              <h4 class="text-xs font-bold text-white">Copiloto Legal & Contable IA</h4>
-              <p class="text-[11px] text-slate-400">Agente interactivo supervisado — Demostración práctica en vivo</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Lo que aprenderás en el Webinar -->
-        <div class="glass-card p-5 space-y-3">
-          <h3 class="text-sm font-bold text-white flex items-center gap-2">
-            <span>✨</span> Ejes Temáticos Clave
-          </h3>
-          <ul class="space-y-2.5 text-xs text-slate-300">
-            <li class="flex items-start gap-2.5">
-              <span class="text-brand-green font-bold text-sm">✓</span>
-              <span><strong>Automatización Documental:</strong> Extracción estructurada y análisis de expedientes, contratos, declaraciones tributarias y balances en segundos.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-brand-cyan font-bold text-sm">✓</span>
-              <span><strong>Confidencialidad & Secreto Profesional:</strong> Modelos privados y protocolos de seguridad para proteger los datos sensibles de tus clientes.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-brand-gold font-bold text-sm">✓</span>
-              <span><strong>Agentes Inteligentes Supervisados:</strong> El rol del copiloto "Human-in-the-Loop": delegar tareas mecánicas sin perder el criterio ni la aprobación experta.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="text-brand-magenta font-bold text-sm">✓</span>
-              <span><strong>Optimización del Tiempo Administrativo:</strong> Cómo recuperar hasta un 60% de horas operativas para dedicarlas a asesoría estratégica de alto valor.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Tarjeta de Organización / e-Formación -->
-        <div class="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
-          <div class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Organiza e Impulsa:</div>
-          <div class="flex items-center justify-between">
-            <div>
-              <h4 class="text-xs font-extrabold text-white">e-Formación • VL Soluciones</h4>
-              <p class="text-[10px] text-slate-400">Soluciones de IA aplicada para despachos y firmas profesionales</p>
-            </div>
-            <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="text-xs font-bold text-brand-cyan hover:underline flex items-center gap-1">
-              <span>Visitar</span> ↗
-            </a>
-          </div>
-        </div>
-
       </div>
 
     </div>
@@ -539,9 +458,9 @@
   </main>
 
   <!-- ==========================================================================
-       SECCIÓN DE SEGURIDAD, CONFIDENCIALIDAD Y POLÍTICAS DE DATOS
+       SECCIÓN DE SEGURIDAD, CONFIDENCIALIDAD Y POLÍTICAS DE DATOS (MAX-W-6XL)
        ========================================================================== -->
-  <section class="max-w-4xl mx-auto px-4 pb-12 w-full space-y-6">
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 w-full space-y-6">
     <div class="glass-card p-6 sm:p-8 border-t-4 border-brand-green space-y-6">
       
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
@@ -553,7 +472,7 @@
             </h3>
           </div>
           <p class="text-xs text-slate-400">
-            Garantías de protección de datos personales y corporativos para despachos jurídicos, contables y consultoras.
+            Garantías de protección y reserva profesional para despachos jurídicos, contables y consultoras.
           </p>
         </div>
         <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="btn-cyan !py-2 !px-4 text-xs font-bold whitespace-nowrap self-start sm:self-auto flex items-center gap-1.5">
@@ -620,20 +539,20 @@
             <span class="text-brand-green font-bold">✓</span>
             <div>
               <strong class="text-white">Adaptación de Casos de Estudio:</strong>
-              <p class="text-[11px] text-slate-400">El diagnóstico nos permite enfocar los ejemplos de IA en la especialidad predominante de tu firma.</p>
+              <p class="text-[11px] text-slate-400">Para enfocar los ejemplos de IA en la especialidad predominante de tu despacho o consultora.</p>
             </div>
           </div>
           <div class="flex items-start gap-2">
             <span class="text-brand-green font-bold">✓</span>
             <div>
               <strong class="text-white">Entrega de Materiales y Certificado:</strong>
-              <p class="text-[11px] text-slate-400">Envío posterior de plantillas de prompts, flujos de agentes supervisados y certificado de participación.</p>
+              <p class="text-[11px] text-slate-400">Envío posterior de memorias, grabaciones y certificado de asistencia.</p>
             </div>
           </div>
         </div>
 
         <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
-          <span>¿Deseas consultar, corregir o suprimir tus datos? Escríbenos a: <strong class="text-slate-300">privacidad@vl-soluciones.com</strong></span>
+          <span>Para consultas, rectificación o revocatoria de datos: <strong class="text-brand-cyan font-mono">epartnerclass@gmail.com</strong></span>
           <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-brand-cyan hover:underline font-semibold">
             Leer términos legales completos →
           </button>
@@ -669,14 +588,14 @@
         <div>
           <h4 class="font-bold text-white mb-1">1. Responsable del Tratamiento</h4>
           <p class="text-slate-400">
-            El responsable del tratamiento de los datos recolectados es <strong>e-Formación / VL Soluciones</strong> en conjunto con la dirección del programa <strong>Del chat al Agente: Go</strong> a cargo de la <strong>Esp. Maria Esther Espinoza</strong>, con portal web oficial en <a href="https://e-formacion.vl-soluciones.com/" target="_blank" class="text-brand-cyan underline">https://e-formacion.vl-soluciones.com/</a>.
+            El responsable del tratamiento de los datos recolectados es <strong>e-Formación / VL Soluciones</strong> con la dirección académica de la <strong>Esp. Maria Esther Espinoza</strong>. Canal de contacto oficial: <strong class="text-white font-mono">epartnerclass@gmail.com</strong>.
           </p>
         </div>
 
         <div>
           <h4 class="font-bold text-white mb-1">2. Datos Solicitados y Naturaleza</h4>
           <p class="text-slate-400">
-            A través del formulario de inscripción al Webinar Conjunto (Legal + Contable) se solicitan: nombre completo, correo electrónico corporativo, país de residencia, despacho o firma a la que pertenece, área de especialidad, rol profesional, autodiagnóstico de uso de Inteligencia Artificial y preguntas opcionales para la especialista. No se recolectan datos sensibles según la definición legal.
+            A través del formulario de inscripción al Webinar Conjunto (Legal + Contable) se solicitan: nombre completo, correo electrónico corporativo, país de residencia, despacho o firma a la que pertenece, área de especialidad, rol profesional y preguntas opcionales para la especialista. No se recolectan datos sensibles según la definición legal.
           </p>
         </div>
 
@@ -685,9 +604,8 @@
           <ul class="list-disc pl-5 space-y-1 text-slate-400">
             <li>Emisión, verificación y acreditación del Pase Digital Oficial para el evento.</li>
             <li>Gestión del enlace de acceso a la transmisión privada en directo y recordatorios de inicio.</li>
-            <li>Personalización y pertinencia de los ejemplos pedagógicos durante la sesión en vivo.</li>
+            <li>Pertinencia y contexto de los ejemplos pedagógicos durante la sesión en vivo.</li>
             <li>Envío de material académico, guías prácticas de agentes supervisados y certificados de asistencia.</li>
-            <li>Comunicaciones informativas sobre futuras ediciones y programas formativos especializados (con opción de baja en un clic).</li>
           </ul>
         </div>
 
@@ -708,7 +626,7 @@
         <div>
           <h4 class="font-bold text-white mb-1">6. Derechos del Titular (Derechos ARCO)</h4>
           <p class="text-slate-400">
-            Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento, así como a revocar la autorización de tratamiento otorgada, mediante correo electrónico dirigido a <strong>privacidad@vl-soluciones.com</strong> con el asunto «Ejercicio de Derechos Habeas Data».
+            Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento, así como a revocar la autorización de tratamiento otorgada, mediante correo electrónico dirigido a <strong class="text-white font-mono">epartnerclass@gmail.com</strong> con el asunto «Ejercicio de Derechos Habeas Data».
           </p>
         </div>
 
@@ -727,8 +645,8 @@
   <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
-  <footer class="bg-slate-900 border-t border-slate-800 py-6 px-4 text-center text-xs text-slate-400">
-    <div class="max-w-4xl mx-auto space-y-3">
+  <footer class="bg-slate-900/90 border-t border-slate-800 py-6 px-4 text-center text-xs text-slate-400">
+    <div class="max-w-6xl mx-auto space-y-3">
       <div class="flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-400">
         <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="hover:text-brand-cyan transition-colors underline">
           Política de Privacidad y Tratamiento de Datos
@@ -736,6 +654,10 @@
         <span>•</span>
         <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="hover:text-brand-cyan transition-colors">
           Plataforma e-Formación
+        </a>
+        <span>•</span>
+        <a href="mailto:epartnerclass@gmail.com" class="hover:text-brand-cyan transition-colors">
+          Contacto: epartnerclass@gmail.com
         </a>
         <span>•</span>
         <a href="index.html" class="hover:text-brand-green transition-colors">

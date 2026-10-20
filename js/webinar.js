@@ -1,14 +1,13 @@
 /**
- * Gestor del Formulario de Inscripción Interactivo para el Webinar:
+ * Gestor del Formulario de Inscripción para el Webinar:
  * "Socio Digital para Firmas: Copiloto Legal y Contable con IA"
  * Especialista: Maria Esther Espinoza (Esp. en gestión de procesos con IA)
- * e-formacion.vl-soluciones.com
+ * Contacto: epartnerclass@gmail.com
+ * Plataforma: https://e-formacion.vl-soluciones.com/
  */
 
 class WebinarManager {
   constructor() {
-    this.currentStep = 1;
-    this.totalSteps = 3; // Step 1: Perfil Firma, Step 2: Diagnóstico IA, Step 3: Pase Digital
     // Martes 17 de Noviembre, 19:00 Hs Colombia (GMT-5)
     this.webinarDate = new Date("2026-11-17T19:00:00-05:00");
     this.formData = {
@@ -16,11 +15,8 @@ class WebinarManager {
       email: "",
       country: "🇨🇴 Colombia",
       institution: "",
-      educationLevel: "Legal / Jurídico",
+      educationLevel: "Firma Conjunta (Legal + Contable)",
       teacherRole: "Socio / Titular de Firma",
-      aiExperience: "🥈 Uso Ocasional",
-      aiTools: ["Análisis de Contratos", "Automatización Contable", "OCR Masivo", "Confidencialidad"],
-      topicsOfInterest: ["Automatización Documental", "Confidencialidad", "Agentes Supervisados"],
       speakerQuestion: "",
       ticketId: "",
       registeredAt: null
@@ -58,13 +54,14 @@ class WebinarManager {
   }
 
   bindEvents() {
-    // Inputs del Formulario Paso 1
+    // Inputs del Formulario
     const nameInput = document.getElementById("webinar-name");
     const emailInput = document.getElementById("webinar-email");
     const countrySelect = document.getElementById("webinar-country");
     const institutionInput = document.getElementById("webinar-institution");
     const levelSelect = document.getElementById("webinar-level");
     const roleSelect = document.getElementById("webinar-role");
+    const questionInput = document.getElementById("webinar-question");
 
     if (nameInput) {
       if (this.formData.fullName) nameInput.value = this.formData.fullName;
@@ -111,33 +108,6 @@ class WebinarManager {
       });
     }
 
-    // Chips de Herramientas IA (Paso 2)
-    document.querySelectorAll(".ai-tool-chip").forEach((chip) => {
-      chip.addEventListener("click", () => {
-        const tool = chip.getAttribute("data-tool");
-        chip.classList.toggle("active");
-
-        if (chip.classList.contains("active")) {
-          if (!this.formData.aiTools.includes(tool)) {
-            this.formData.aiTools.push(tool);
-          }
-        } else {
-          this.formData.aiTools = this.formData.aiTools.filter((t) => t !== tool);
-        }
-      });
-    });
-
-    // Rating / Nivel de Experiencia IA
-    document.querySelectorAll(".ai-exp-option").forEach((option) => {
-      option.addEventListener("click", () => {
-        document.querySelectorAll(".ai-exp-option").forEach((opt) => opt.classList.remove("selected"));
-        option.classList.add("selected");
-        this.formData.aiExperience = option.getAttribute("data-exp");
-      });
-    });
-
-    // Pregunta a la especialista
-    const questionInput = document.getElementById("webinar-question");
     if (questionInput) {
       if (this.formData.speakerQuestion) questionInput.value = this.formData.speakerQuestion;
       questionInput.addEventListener("input", (e) => {
@@ -145,26 +115,7 @@ class WebinarManager {
       });
     }
 
-    // Botones de Navegación del Stepper
-    const nextBtn1 = document.getElementById("webinar-next-1");
-    if (nextBtn1) {
-      nextBtn1.addEventListener("click", () => this.goToStep(2));
-    }
-
-    const prevBtn2 = document.getElementById("webinar-prev-2");
-    if (prevBtn2) {
-      prevBtn2.addEventListener("click", () => this.goToStep(1));
-    }
-
-    const submitBtn = document.getElementById("webinar-submit-btn");
-    if (submitBtn) {
-      submitBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        this.submitRegistration();
-      });
-    }
-
-    // Acciones del Ticket Final (Paso 3 / Confirmación)
+    // Botones de acción del Ticket Confirmado
     const downloadCalBtn = document.getElementById("btn-download-ics");
     if (downloadCalBtn) {
       downloadCalBtn.addEventListener("click", () => this.downloadCalendarEvent());
@@ -179,68 +130,34 @@ class WebinarManager {
     if (resetRegBtn) {
       resetRegBtn.addEventListener("click", () => {
         this.isAlreadyRegistered = false;
-        this.goToStep(1);
+        const formCard = document.getElementById("webinar-form-container");
+        const confirmCard = document.getElementById("webinar-step-confirmation");
+        if (formCard) formCard.classList.remove("hidden");
+        if (confirmCard) confirmCard.classList.add("hidden");
       });
     }
   }
 
-  goToStep(step) {
-    if (step === 2) {
-      if (!this.formData.fullName) {
-        alert("Por favor, ingresa tu Nombre y Apellido.");
-        document.getElementById("webinar-name")?.focus();
-        return;
-      }
-      if (!this.formData.email || !this.formData.email.includes("@")) {
-        alert("Por favor, ingresa un correo electrónico corporativo válido.");
-        document.getElementById("webinar-email")?.focus();
-        return;
-      }
-    }
-
-    this.currentStep = step;
-    this.renderStepView();
-  }
-
-  renderStepView() {
-    for (let i = 1; i <= 3; i++) {
-      const stepEl = document.getElementById(`webinar-step-${i}`);
-      const indicatorEl = document.getElementById(`stepper-indicator-${i}`);
-
-      if (stepEl) {
-        if (i === this.currentStep) {
-          stepEl.classList.remove("hidden");
-        } else {
-          stepEl.classList.add("hidden");
-        }
-      }
-
-      if (indicatorEl) {
-        if (i < this.currentStep) {
-          indicatorEl.className = "stepper-item completed";
-        } else if (i === this.currentStep) {
-          indicatorEl.className = "stepper-item active";
-        } else {
-          indicatorEl.className = "stepper-item";
-        }
-      }
-    }
-
-    const ticketView = document.getElementById("webinar-step-confirmation");
-    if (ticketView) {
-      if (this.currentStep === 4) {
-        ticketView.classList.remove("hidden");
-        document.getElementById("webinar-stepper-bar")?.classList.add("hidden");
-      } else {
-        ticketView.classList.add("hidden");
-        document.getElementById("webinar-stepper-bar")?.classList.remove("hidden");
-      }
-    }
-
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
   submitRegistration() {
+    // Validaciones de datos obligatorios
+    if (!this.formData.fullName) {
+      alert("Por favor, ingresa tu Nombre y Apellido.");
+      document.getElementById("webinar-name")?.focus();
+      return;
+    }
+
+    if (!this.formData.email || !this.formData.email.includes("@")) {
+      alert("Por favor, ingresa un correo electrónico corporativo válido.");
+      document.getElementById("webinar-email")?.focus();
+      return;
+    }
+
+    if (!this.formData.institution) {
+      alert("Por favor, ingresa el nombre de tu Despacho, Firma o Consultora.");
+      document.getElementById("webinar-institution")?.focus();
+      return;
+    }
+
     const consentInput = document.getElementById("webinar-consent");
     if (consentInput && !consentInput.checked) {
       alert("Debes aceptar la Política de Privacidad y Tratamiento de Datos para confirmar tu inscripción.");
@@ -261,8 +178,16 @@ class WebinarManager {
       }
     }
 
-    this.currentStep = 4;
-    this.renderStepView();
+    // Transición visual limpia a la vista de confirmación
+    const formCard = document.getElementById("webinar-form-container");
+    const confirmCard = document.getElementById("webinar-step-confirmation");
+
+    if (formCard) formCard.classList.add("hidden");
+    if (confirmCard) {
+      confirmCard.classList.remove("hidden");
+      confirmCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
     this.renderTicketDetails();
     this.triggerConfetti();
   }
@@ -286,13 +211,11 @@ class WebinarManager {
     const instEl = document.getElementById("final-ticket-institution");
     const idEl = document.getElementById("final-ticket-id");
     const emailEl = document.getElementById("final-ticket-email");
-    const expEl = document.getElementById("final-ticket-exp");
 
     if (nameEl) nameEl.textContent = this.formData.fullName;
     if (instEl) instEl.textContent = `${this.formData.teacherRole} • ${this.formData.institution || "Firma Profesional"}`;
     if (idEl) idEl.textContent = this.formData.ticketId;
     if (emailEl) emailEl.textContent = this.formData.email;
-    if (expEl) expEl.textContent = this.formData.aiExperience;
 
     this.generateQRCodeCanvas();
   }
@@ -381,7 +304,7 @@ CALSCALE:GREGORIAN
 METHOD:REQUEST
 BEGIN:VEVENT
 SUMMARY:Webinar: Socio Digital para Firmas - Copiloto Legal y Contable con IA
-DESCRIPTION:Webinar Conjunto (Legal + Contable): Cómo automatizar la carga documental y operativa de tu despacho o consultora con agentes inteligentes supervisados.\\nEspecialista: Maria Esther Espinoza (Esp. en gestión de procesos con IA).\\nOrganiza: https://e-formacion.vl-soluciones.com/\\nTu Pase Digital: ${this.formData.ticketId}
+DESCRIPTION:Webinar Conjunto (Legal + Contable): Cómo automatizar la carga documental y operativa de tu despacho o consultora con agentes inteligentes supervisados.\\nEspecialista: Maria Esther Espinoza (Esp. en gestión de procesos con IA).\\nOrganiza: https://e-formacion.vl-soluciones.com/\\nContacto: epartnerclass@gmail.com\\nTu Pase Digital: ${this.formData.ticketId}
 LOCATION:Online en Vivo - https://e-formacion.vl-soluciones.com/
 DTSTART:20261118T000000Z
 DTEND:20261118T013000Z
@@ -405,7 +328,7 @@ END:VCALENDAR`;
 
   shareOnWhatsApp() {
     const text = encodeURIComponent(
-      `🚀 ¡Me acabo de inscribir al Webinar "Socio Digital para Firmas: Copiloto Legal y Contable con IA" con Maria Esther Espinoza!\n\n📅 Martes 17 de Noviembre - 19:00 Hs (Colombia)\n💡 Aprende a automatizar la carga documental y operativa de tu despacho con agentes supervisados.\n\n🎟️ Mi Pase Digital Nº ${this.formData.ticketId}\nInscríbete gratis aquí: https://e-formacion.vl-soluciones.com/`
+      `🚀 ¡Me inscribí al Webinar "Socio Digital para Firmas: Copiloto Legal y Contable con IA" con la especialista Maria Esther Espinoza!\n\n📅 Martes 17 de Noviembre - 19:00 Hs (Colombia)\n💡 Descubre cómo automatizar la carga documental de tu despacho con agentes supervisados.\n\n🎟️ Mi Pase Digital Nº ${this.formData.ticketId}\nInscríbete gratis en: https://e-formacion.vl-soluciones.com/`
     );
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
   }
@@ -454,6 +377,10 @@ END:VCALENDAR`;
 document.addEventListener("DOMContentLoaded", () => {
   window.webinarManager = new WebinarManager();
   if (window.webinarManager.isAlreadyRegistered) {
-    window.webinarManager.submitRegistration();
+    const formCard = document.getElementById("webinar-form-container");
+    const confirmCard = document.getElementById("webinar-step-confirmation");
+    if (formCard) formCard.classList.add("hidden");
+    if (confirmCard) confirmCard.classList.remove("hidden");
+    window.webinarManager.renderTicketDetails();
   }
 });
