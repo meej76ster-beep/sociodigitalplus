@@ -12,22 +12,29 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Configuración de Tailwind para Paleta de Diseño -->
+  <!-- Configuración de Tailwind para Paleta Corporativa Navy + Cyan + Gold -->
   <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
+            navy: {
+              950: '#070D1B',
+              900: '#0B132B',
+              800: '#131D36',
+              700: '#1C2B4E',
+              600: '#263B6B'
+            },
             brand: {
-              green: '#76BC21',
-              'green-hover': '#65B32E',
               cyan: '#00AEEF',
               'cyan-hover': '#009AD5',
-              magenta: '#E6007E',
-              'magenta-hover': '#CC0070',
-              gold: '#FFB81C',
-              amber: '#F59E0B'
+              'cyan-light': '#38BDF8',
+              gold: '#F59E0B',
+              'gold-hover': '#D97706',
+              'gold-light': '#FBBF24',
+              green: '#10B981',
+              'green-hover': '#059669'
             }
           }
         }
@@ -38,16 +45,16 @@
   <!-- Estilos Personalizados del Sistema de Diseño -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col webinar-gradient-bg">
+<body class="bg-navy-950 text-slate-100 min-h-screen flex flex-col webinar-gradient-bg">
 
   <!-- ==========================================================================
-       HEADER PRINCIPAL DE NAVEGACIÓN
+       HEADER PRINCIPAL CORPORATIVO
        ========================================================================== -->
-  <header class="sticky top-0 z-30 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 px-4 sm:px-6 py-3.5">
+  <header class="sticky top-0 z-30 bg-navy-900/95 backdrop-blur-md border-b border-navy-700 px-4 sm:px-6 py-3.5">
     <div class="max-w-6xl mx-auto flex items-center justify-between">
       <!-- Logo Marca -->
       <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="flex items-center gap-3 group" title="Ir a e-formacion.vl-soluciones.com">
-        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-green to-brand-cyan flex items-center justify-center font-extrabold text-white text-base shadow-md group-hover:scale-105 transition-transform">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-cyan to-brand-gold flex items-center justify-center font-extrabold text-navy-950 text-base shadow-md group-hover:scale-105 transition-transform">
           SD
         </div>
         <div>
@@ -61,14 +68,14 @@
 
       <!-- Accesos Directos -->
       <div class="flex items-center gap-2.5 sm:gap-3">
-        <div class="hidden lg:flex items-center gap-1.5 text-xs text-slate-300 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-800">
-          <span>📅</span>
+        <div class="hidden lg:flex items-center gap-1.5 text-xs text-slate-300 bg-navy-800/80 px-3 py-1.5 rounded-full border border-navy-700">
+          <span class="text-brand-gold">📅</span>
           <span><strong>Martes 17 de Noviembre</strong> • 19:00 Hs (Colombia)</span>
         </div>
-        <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white bg-slate-900/80 border border-slate-700 hover:border-brand-cyan transition-colors">
+        <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-300 hover:text-white bg-navy-800/80 border border-navy-700 hover:border-brand-cyan transition-colors">
           <span>🔒 Privacidad</span>
         </button>
-        <a href="index.html" class="inline-flex text-xs text-brand-green hover:text-white items-center gap-1.5 transition-colors px-3 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/30 hover:bg-brand-green/20 font-bold">
+        <a href="index.html" class="inline-flex text-xs text-brand-cyan hover:text-white items-center gap-1.5 transition-colors px-3 py-1.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 hover:bg-brand-cyan/20 font-bold">
           <span>🚀 Ir a la App</span>
         </a>
       </div>
@@ -76,24 +83,25 @@
   </header>
 
   <!-- ==========================================================================
-       HERO BANNER & CUENTA REGRESIVA (ANCHO OPTIMIZADO MAX-W-6XL)
+       HERO BANNER & CUENTA REGRESIVA
        ========================================================================== -->
   <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-6 w-full space-y-6">
     
-    <!-- Banner Principal con Imagen de Banner Oficial -->
-    <div class="relative rounded-3xl overflow-hidden border border-slate-800 shadow-2xl group">
+    <!-- Banner Principal con Imagen y Textos Oficiales -->
+    <div class="relative rounded-3xl overflow-hidden border border-navy-700 shadow-2xl group">
       <img src="assets/webinar_banner.jpg" alt="Socio Digital para Firmas: Copiloto Legal y Contable con IA" class="w-full h-64 sm:h-80 md:h-96 object-cover object-center transform group-hover:scale-105 transition-transform duration-700" />
-      <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/20 flex flex-col justify-end p-6 sm:p-10">
+      <div class="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/85 to-navy-950/25 flex flex-col justify-end p-6 sm:p-10">
         <div class="space-y-3 max-w-4xl">
+          
           <div class="flex flex-wrap items-center gap-2">
             <span class="bg-brand-cyan/20 text-brand-cyan border border-brand-cyan/40 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
               Webinar Conjunto (Legal + Contable)
             </span>
-            <span class="bg-brand-green/20 text-brand-green border border-brand-green/40 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
-              <span class="w-2 h-2 rounded-full bg-brand-green animate-ping"></span>
+            <span class="bg-brand-gold/20 text-brand-gold border border-brand-gold/40 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-brand-gold animate-ping"></span>
               Online en Vivo
             </span>
-            <span class="text-xs text-slate-300 bg-slate-900/90 border border-slate-700 px-3 py-1 rounded-full font-semibold">
+            <span class="text-xs text-slate-300 bg-navy-900/90 border border-navy-700 px-3 py-1 rounded-full font-semibold">
               📅 Martes 17 de Noviembre • 19:00 Hs Colombia (GMT-5)
             </span>
           </div>
@@ -107,7 +115,7 @@
           </p>
 
           <!-- Propuesta de Valor Oficial -->
-          <div class="p-3.5 sm:p-4 rounded-2xl bg-slate-900/90 border border-brand-cyan/40 flex items-start gap-3 backdrop-blur-md">
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-navy-900/90 border border-brand-cyan/40 flex items-start gap-3 backdrop-blur-md">
             <div class="w-8 h-8 rounded-lg bg-brand-cyan/20 text-brand-cyan flex items-center justify-center text-lg flex-shrink-0 mt-0.5">
               ⚖️
             </div>
@@ -118,6 +126,7 @@
               </p>
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -126,44 +135,44 @@
     <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
       
       <!-- Reloj de Cuenta Regresiva (7 Cols) -->
-      <div class="md:col-span-7 glass-card p-4 sm:p-5 border-l-4 border-brand-green flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div class="md:col-span-7 glass-card p-4 sm:p-5 border-l-4 border-brand-cyan flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
           <div class="text-[11px] text-slate-400 uppercase tracking-widest font-bold flex items-center gap-1.5">
-            <span>⏱️</span> El Webinar en Vivo Comienza en:
+            <span class="text-brand-gold">⏱️</span> El Webinar en Vivo Comienza en:
           </div>
-          <span class="text-xs text-slate-300">Sala en directo con acceso interactivo</span>
+          <span class="text-xs text-slate-300">Sala en directo con acceso privado</span>
         </div>
         <div class="grid grid-cols-4 gap-2 sm:gap-3 text-center">
-          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
-            <span id="cd-days" class="text-lg sm:text-2xl font-black text-brand-green block leading-tight">00</span>
+          <div class="px-2.5 py-1.5 bg-navy-900/90 rounded-xl border border-navy-700">
+            <span id="cd-days" class="text-lg sm:text-2xl font-black text-brand-cyan block leading-tight">00</span>
             <span class="text-[9px] text-slate-400 uppercase font-semibold">Días</span>
           </div>
-          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
-            <span id="cd-hours" class="text-lg sm:text-2xl font-black text-brand-cyan block leading-tight">00</span>
+          <div class="px-2.5 py-1.5 bg-navy-900/90 rounded-xl border border-navy-700">
+            <span id="cd-hours" class="text-lg sm:text-2xl font-black text-brand-gold block leading-tight">00</span>
             <span class="text-[9px] text-slate-400 uppercase font-semibold">Horas</span>
           </div>
-          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
-            <span id="cd-mins" class="text-lg sm:text-2xl font-black text-brand-gold block leading-tight">00</span>
+          <div class="px-2.5 py-1.5 bg-navy-900/90 rounded-xl border border-navy-700">
+            <span id="cd-mins" class="text-lg sm:text-2xl font-black text-white block leading-tight">00</span>
             <span class="text-[9px] text-slate-400 uppercase font-semibold">Mins</span>
           </div>
-          <div class="px-2.5 py-1.5 bg-slate-900/90 rounded-xl border border-slate-800">
-            <span id="cd-secs" class="text-lg sm:text-2xl font-black text-brand-magenta block leading-tight">00</span>
+          <div class="px-2.5 py-1.5 bg-navy-900/90 rounded-xl border border-navy-700">
+            <span id="cd-secs" class="text-lg sm:text-2xl font-black text-brand-cyan block leading-tight">00</span>
             <span class="text-[9px] text-slate-400 uppercase font-semibold">Segs</span>
           </div>
         </div>
       </div>
 
       <!-- Especialista Badge (5 Cols) -->
-      <div class="md:col-span-5 glass-card p-4 sm:p-5 border-l-4 border-brand-cyan flex items-center gap-3.5">
-        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-cyan to-brand-green p-0.5 flex-shrink-0">
-          <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-xl font-bold text-white">
+      <div class="md:col-span-5 glass-card p-4 sm:p-5 border-l-4 border-brand-gold flex items-center gap-3.5">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-cyan to-brand-gold p-0.5 flex-shrink-0">
+          <div class="w-full h-full bg-navy-950 rounded-[14px] flex items-center justify-center text-xl font-bold text-white">
             👩‍💼
           </div>
         </div>
         <div class="min-w-0">
-          <span class="text-[10px] text-brand-cyan font-extrabold uppercase tracking-wider block">Especialista Invitada</span>
+          <span class="text-[10px] text-brand-gold font-extrabold uppercase tracking-wider block">Especialista Invitada</span>
           <h3 class="text-sm font-bold text-white leading-tight">Maria Esther Espinoza</h3>
-          <p class="text-xs text-slate-400 truncate">Esp. en gestión de procesos con IA</p>
+          <p class="text-xs text-slate-300 truncate">Esp. en gestión de procesos con IA</p>
         </div>
       </div>
 
@@ -172,26 +181,92 @@
   </section>
 
   <!-- ==========================================================================
-       SECCIÓN PRINCIPAL DE REGISTRO & INFORMACIÓN (BALANCEADA 2 COLUMNAS)
+       SECCIÓN PRINCIPAL: FICHA OFICIAL + FORMULARIO DE REGISTRO
+       (SIN VISTA PREVIA VACÍA, BALANCE TOTAL EN 2 COLUMNAS)
        ========================================================================== -->
   <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 w-full flex-1">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
       
-      <!-- COLUMNA IZQUIERDA: FORMULARIO DE INSCRIPCIÓN (7 Cols) -->
-      <div class="lg:col-span-7">
+      <!-- COLUMNA IZQUIERDA: DETALLES OFICIALES DEL EVENTO (5 Cols) -->
+      <div class="lg:col-span-5 flex flex-col">
+        <div class="glass-card p-6 sm:p-7 border-t-4 border-brand-gold space-y-5 flex-1 flex flex-col justify-between">
+          
+          <div class="space-y-4">
+            <div class="flex items-center justify-between border-b border-navy-700 pb-3">
+              <span class="text-xs font-bold text-brand-gold uppercase tracking-wider flex items-center gap-1.5">
+                <span>📋</span> Ficha Oficial del Evento
+              </span>
+              <span class="text-[10px] text-brand-cyan font-bold bg-brand-cyan/15 px-2.5 py-0.5 rounded-full border border-brand-cyan/30">100% Gratuito</span>
+            </div>
+
+            <div>
+              <span class="text-slate-400 text-[11px] block">Título:</span>
+              <strong class="text-white text-base block leading-tight font-extrabold mt-0.5">
+                Socio Digital para Firmas: Copiloto Legal y Contable con IA
+              </strong>
+            </div>
+
+            <div>
+              <span class="text-slate-400 text-[11px] block">Subtítulo Comercial:</span>
+              <p class="text-xs text-slate-300 leading-relaxed mt-0.5">
+                Cómo automatizar la carga documental y operativa de tu despacho o consultora con agentes inteligentes supervisados.
+              </p>
+            </div>
+
+            <div class="p-3.5 bg-navy-900/90 rounded-2xl border border-brand-cyan/30 space-y-1">
+              <span class="text-[11px] font-bold text-brand-cyan block">Por qué funciona:</span>
+              <p class="text-xs text-slate-200 leading-relaxed">
+                Agrupa a ambos colectivos bajo la necesidad compartida de <strong>confidencialidad, análisis normativo y optimización de tiempo administrativo</strong>.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div class="p-3 bg-navy-900/70 rounded-xl border border-navy-700">
+                <span class="text-slate-400 block text-[10px] uppercase font-semibold">🎙️ Especialista</span>
+                <strong class="text-white block mt-0.5">Maria Esther Espinoza</strong>
+                <span class="block text-brand-cyan text-[11px]">Esp. en gestión de procesos con IA</span>
+              </div>
+              <div class="p-3 bg-navy-900/70 rounded-xl border border-navy-700">
+                <span class="text-slate-400 block text-[10px] uppercase font-semibold">📅 Fecha y Hora</span>
+                <strong class="text-brand-gold block mt-0.5">Martes 17 de Noviembre</strong>
+                <span class="block text-slate-300 text-[11px]">19:00 Hs (Colombia / GMT-5)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-navy-700 space-y-2 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400">Plataforma Oficial:</span>
+              <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="text-brand-cyan hover:underline font-bold">
+                e-formacion.vl-soluciones.com ↗
+              </a>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-slate-400">Contacto y Consultas:</span>
+              <a href="mailto:epartnerclass@gmail.com" class="text-brand-gold hover:underline font-mono text-xs">
+                epartnerclass@gmail.com
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COLUMNA DERECHA: FORMULARIO DE REGISTRO DIRECTO (7 Cols) -->
+      <div class="lg:col-span-7 flex flex-col">
         
         <!-- Tarjeta del Formulario -->
-        <div id="webinar-form-container" class="glass-card p-6 sm:p-8 space-y-5">
+        <div id="webinar-form-container" class="glass-card p-6 sm:p-8 space-y-5 flex-1 border-t-4 border-brand-cyan">
           
           <div>
             <div class="flex items-center justify-between mb-1">
-              <span class="text-xs font-bold text-brand-green uppercase tracking-wider">Inscripción Oficial</span>
+              <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider">Inscripción Oficial</span>
               <span class="text-[11px] text-slate-400">Cupos Limitados</span>
             </div>
             <h2 class="text-xl sm:text-2xl font-extrabold text-white">Reserva tu Lugar Gratuito</h2>
             <p class="text-xs sm:text-sm text-slate-400 mt-1">
-              Completa tus datos profesionales para generar tu Pase Digital y recibir el enlace de acceso directo.
+              Ingresa tus datos para recibir tu Pase Digital Oficial y el enlace privado a la sesión en vivo.
             </p>
           </div>
 
@@ -266,34 +341,34 @@
               <label class="block text-xs font-bold text-slate-300 mb-1.5">
                 Pregunta para Maria Esther Espinoza (Opcional):
               </label>
-              <textarea id="webinar-question" rows="2" placeholder="¿Qué inquietud o proceso documental quisieras consultar en la sesión en vivo?" class="webinar-input text-xs"></textarea>
+              <textarea id="webinar-question" rows="2" placeholder="¿Qué proceso o inquietud específica de tu despacho quisieras abordar en la sesión?" class="webinar-input text-xs"></textarea>
             </div>
 
-            <!-- Cláusula de Privacidad y Consentimiento de Datos -->
-            <div class="p-3.5 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
+            <!-- Cláusula de Privacidad y Consentimiento -->
+            <div class="p-3.5 bg-navy-900/90 rounded-2xl border border-navy-700 space-y-2">
               <label class="flex items-start gap-2.5 cursor-pointer text-xs text-slate-300">
-                <input id="webinar-consent" type="checkbox" class="mt-0.5 rounded text-brand-green focus:ring-brand-green border-slate-700 bg-slate-800 w-4 h-4 cursor-pointer" required checked />
+                <input id="webinar-consent" type="checkbox" class="mt-0.5 rounded text-brand-cyan focus:ring-brand-cyan border-navy-600 bg-navy-800 w-4 h-4 cursor-pointer" required checked />
                 <span class="leading-relaxed">
                   Acepto el tratamiento de mis datos personales para la emisión de mi Pase Digital y comunicaciones del evento, conforme a la <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-brand-cyan hover:underline font-bold inline">Política de Privacidad y Tratamiento de Datos</button> (Ley 1581 / Habeas Data / RGPD).
                 </span>
               </label>
-              <div class="flex flex-wrap items-center gap-3 pt-1 border-t border-slate-800 text-[10px] text-slate-400">
+              <div class="flex flex-wrap items-center gap-3 pt-1 border-t border-navy-700 text-[10px] text-slate-400">
                 <span class="flex items-center gap-1">🔒 SSL 256 bits</span>
                 <span class="flex items-center gap-1">⚖️ Secreto profesional</span>
                 <span class="flex items-center gap-1">🚫 No cesión de datos</span>
-                <span class="flex items-center gap-1">✉️ Contacto: epartnerclass@gmail.com</span>
+                <span class="flex items-center gap-1">✉️ epartnerclass@gmail.com</span>
               </div>
             </div>
 
-            <button type="submit" id="webinar-submit-btn" class="w-full btn-primary py-4 text-sm font-black flex items-center justify-center gap-2 shadow-xl shadow-brand-green/20">
-              <span>🚀 CONFIRMAR INSCRIPCIÓN Y OBTENER PASE DIGITAL</span>
+            <button type="submit" id="webinar-submit-btn" class="w-full btn-primary py-4 text-sm font-black flex items-center justify-center gap-2 shadow-xl shadow-brand-cyan/20">
+              <span>🚀 CONFIRMAR INSCRIPCIÓN Y RESERVAR LUGAR</span>
             </button>
           </form>
 
         </div>
 
-        <!-- Tarjeta de Pase Digital Confirmado (Se muestra al completar) -->
-        <div id="webinar-step-confirmation" class="hidden glass-card p-6 sm:p-8 space-y-6 text-center">
+        <!-- Tarjeta de Pase Digital Confirmado (Se activa al enviar) -->
+        <div id="webinar-step-confirmation" class="hidden glass-card p-6 sm:p-8 space-y-6 text-center flex-1 border-t-4 border-brand-green">
           
           <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-green/20 border border-brand-green/40 text-brand-green text-xs font-bold">
             <span>🎉 ¡INSCRIPCIÓN CONFIRMADA EXITOSAMENTE!</span>
@@ -311,18 +386,18 @@
             <div class="ticket-notch-left"></div>
             <div class="ticket-notch-right"></div>
 
-            <div class="flex items-center justify-between mb-4 border-b border-slate-800 pb-3">
+            <div class="flex items-center justify-between mb-4 border-b border-navy-700 pb-3">
               <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-green to-brand-cyan flex items-center justify-center font-bold text-white text-xs">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-gold flex items-center justify-center font-bold text-navy-950 text-xs">
                   SD
                 </div>
                 <div>
                   <span class="text-[9px] font-bold text-slate-400 block leading-none">e-formacion.vl-soluciones.com</span>
-                  <span class="text-xs font-extrabold text-brand-green">PASE OFICIAL WEBINAR</span>
+                  <span class="text-xs font-extrabold text-brand-cyan">PASE OFICIAL WEBINAR</span>
                 </div>
               </div>
               <div class="text-right">
-                <span id="final-ticket-id" class="font-mono text-xs text-brand-cyan font-bold block">#SD-FIRMAS-2026-8492</span>
+                <span id="final-ticket-id" class="font-mono text-xs text-brand-gold font-bold block">#SD-FIRMAS-2026-8492</span>
                 <span class="text-[9px] text-slate-400 uppercase">Confirmado</span>
               </div>
             </div>
@@ -349,105 +424,17 @@
           <!-- Botones de Acción Post-Inscripción -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md mx-auto pt-2">
             <button id="btn-download-ics" class="btn-cyan text-xs font-bold py-3 flex items-center justify-center gap-2">
-              <span>📅 Agregar a mi Calendario (.ics)</span>
+              <span>📅 Agregar al Calendario (.ics)</span>
             </button>
             <button id="btn-share-whatsapp" class="btn-primary text-xs font-bold py-3 flex items-center justify-center gap-2">
               <span>💬 Compartir en WhatsApp</span>
             </button>
           </div>
 
-          <div class="pt-4 border-t border-slate-800">
+          <div class="pt-4 border-t border-navy-700">
             <button id="btn-edit-registration" class="text-xs text-slate-400 hover:text-white underline">
               Editar mis datos de inscripción
             </button>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- COLUMNA DERECHA: INFORMACIÓN OFICIAL & LIVE PREVIEW (5 Cols) -->
-      <div class="lg:col-span-5 space-y-6">
-        
-        <!-- Tarjeta de Detalles Oficiales del Webinar -->
-        <div class="glass-card p-6 border-t-4 border-brand-cyan space-y-4">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <span class="text-xs font-bold text-brand-cyan uppercase tracking-wider flex items-center gap-1.5">
-              <span>📋</span> Ficha Técnica del Evento
-            </span>
-            <span class="text-[10px] text-brand-green font-semibold bg-brand-green/10 px-2 py-0.5 rounded-full border border-brand-green/30">100% Gratuito</span>
-          </div>
-
-          <div class="space-y-3 text-xs">
-            <div>
-              <span class="text-slate-400 text-[11px] block">Título:</span>
-              <strong class="text-white text-sm block leading-tight">Socio Digital para Firmas: Copiloto Legal y Contable con IA</strong>
-            </div>
-
-            <div>
-              <span class="text-slate-400 text-[11px] block">Subtítulo Comercial:</span>
-              <p class="text-slate-300 leading-relaxed">
-                Cómo automatizar la carga documental y operativa de tu despacho o consultora con agentes inteligentes supervisados.
-              </p>
-            </div>
-
-            <div class="p-3 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1">
-              <span class="text-[11px] font-bold text-brand-cyan block">Por qué funciona:</span>
-              <p class="text-slate-300 leading-relaxed">
-                Agrupa a ambos colectivos bajo la necesidad compartida de confidencialidad, análisis normativo y optimización de tiempo administrativo.
-              </p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-2 pt-1 text-[11px]">
-              <div class="p-2.5 bg-slate-900/60 rounded-xl border border-slate-800">
-                <span class="text-slate-400 block text-[10px]">🎙️ Especialista</span>
-                <strong class="text-white">Maria Esther Espinoza</strong>
-                <span class="block text-slate-400 text-[10px]">Esp. en gestión de procesos con IA</span>
-              </div>
-              <div class="p-2.5 bg-slate-900/60 rounded-xl border border-slate-800">
-                <span class="text-slate-400 block text-[10px]">📅 Fecha y Hora</span>
-                <strong class="text-brand-gold">Martes 17 de Noviembre</strong>
-                <span class="block text-slate-400 text-[10px]">19:00 Hs (Colombia / GMT-5)</span>
-              </div>
-            </div>
-
-            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
-              <span class="text-slate-400">Plataforma:</span>
-              <a href="https://e-formacion.vl-soluciones.com/" target="_blank" rel="noopener" class="text-brand-cyan hover:underline font-bold">
-                e-formacion.vl-soluciones.com ↗
-              </a>
-            </div>
-
-            <div class="flex items-center justify-between text-[11px]">
-              <span class="text-slate-400">Contacto y Privacidad:</span>
-              <a href="mailto:epartnerclass@gmail.com" class="text-slate-300 hover:text-white font-mono">
-                epartnerclass@gmail.com
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tarjeta de Live Preview del Pase mientras escribe -->
-        <div class="glass-card p-5 border-t-4 border-brand-green space-y-3">
-          <div class="flex items-center justify-between text-xs text-slate-400">
-            <span class="font-bold flex items-center gap-1.5 text-brand-green">
-              <span>🎟️</span> Vista Previa en Vivo de tu Pase
-            </span>
-            <span class="text-[10px] text-slate-500 uppercase">Tiempo real</span>
-          </div>
-
-          <div class="p-4 bg-slate-900/90 rounded-2xl border border-slate-800 space-y-2">
-            <div class="flex items-center gap-3">
-              <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-green via-brand-cyan to-brand-gold p-0.5 flex-shrink-0">
-                <div class="w-full h-full bg-slate-950 rounded-[14px] flex items-center justify-center text-lg font-bold text-white">
-                  ⚖️
-                </div>
-              </div>
-              <div class="min-w-0 flex-1">
-                <h4 id="ticket-preview-name" class="text-sm font-bold text-white truncate">Tu Nombre Aquí</h4>
-                <p id="ticket-preview-role" class="text-xs text-brand-green font-medium truncate">Socio / Titular de Firma</p>
-                <p id="ticket-preview-inst" class="text-[10px] text-slate-400 truncate">Nombre de tu Despacho o Firma</p>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -458,12 +445,12 @@
   </main>
 
   <!-- ==========================================================================
-       SECCIÓN DE SEGURIDAD, CONFIDENCIALIDAD Y POLÍTICAS DE DATOS (MAX-W-6XL)
+       SECCIÓN DE SEGURIDAD, CONFIDENCIALIDAD Y POLÍTICAS DE DATOS
        ========================================================================== -->
   <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-12 w-full space-y-6">
-    <div class="glass-card p-6 sm:p-8 border-t-4 border-brand-green space-y-6">
+    <div class="glass-card p-6 sm:p-8 border-t-4 border-brand-cyan space-y-6">
       
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-navy-700 pb-4">
         <div class="space-y-1">
           <div class="flex items-center gap-2">
             <span class="text-2xl">🛡️</span>
@@ -483,8 +470,8 @@
       <!-- 3 Tarjetas de Pilares de Seguridad -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
         
-        <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-green/20 border border-brand-green/40 flex items-center justify-center text-brand-green text-xl font-bold">
+        <div class="p-4 bg-navy-900/60 rounded-2xl border border-navy-700 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 border border-brand-cyan/40 flex items-center justify-center text-brand-cyan text-xl font-bold">
             🔒
           </div>
           <h4 class="text-xs font-extrabold text-white">Cifrado de Grado Bancario</h4>
@@ -493,8 +480,8 @@
           </p>
         </div>
 
-        <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 border border-brand-cyan/40 flex items-center justify-center text-brand-cyan text-xl font-bold">
+        <div class="p-4 bg-navy-900/60 rounded-2xl border border-navy-700 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center text-brand-gold text-xl font-bold">
             ⚖️
           </div>
           <h4 class="text-xs font-extrabold text-white">Secreto Profesional y No Cesión</h4>
@@ -503,8 +490,8 @@
           </p>
         </div>
 
-        <div class="p-4 bg-slate-900/60 rounded-2xl border border-slate-800 space-y-2">
-          <div class="w-10 h-10 rounded-xl bg-brand-gold/20 border border-brand-gold/40 flex items-center justify-center text-brand-gold text-xl font-bold">
+        <div class="p-4 bg-navy-900/60 rounded-2xl border border-navy-700 space-y-2">
+          <div class="w-10 h-10 rounded-xl bg-brand-cyan/20 border border-brand-cyan/40 flex items-center justify-center text-brand-cyan text-xl font-bold">
             🤖
           </div>
           <h4 class="text-xs font-extrabold text-white">Cero Entrenamiento en IA Pública</h4>
@@ -516,34 +503,34 @@
       </div>
 
       <!-- Cuadro Explicativo: Por Qué Pedimos Datos y Qué Hacemos con Ellos -->
-      <div class="p-4 sm:p-5 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-3">
+      <div class="p-4 sm:p-5 rounded-2xl bg-navy-900/90 border border-navy-700 space-y-3">
         <h4 class="text-xs font-extrabold text-brand-cyan uppercase tracking-wider flex items-center gap-2">
           <span>📋</span> Finalidad y Destino Exclusivo de los Datos Solicitados:
         </h4>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-slate-300">
           <div class="flex items-start gap-2">
-            <span class="text-brand-green font-bold">✓</span>
+            <span class="text-brand-cyan font-bold">✓</span>
             <div>
               <strong class="text-white">Generación de tu Pase Digital:</strong>
               <p class="text-[11px] text-slate-400">Para asociar tu credencial con código QR personalizado y registrar tu asistencia formal.</p>
             </div>
           </div>
           <div class="flex items-start gap-2">
-            <span class="text-brand-green font-bold">✓</span>
+            <span class="text-brand-cyan font-bold">✓</span>
             <div>
               <strong class="text-white">Envío del Enlace de Transmisión:</strong>
               <p class="text-[11px] text-slate-400">Recibirás por correo el link directo a la sala en vivo de YouTube / Zoom el día del evento.</p>
             </div>
           </div>
           <div class="flex items-start gap-2">
-            <span class="text-brand-green font-bold">✓</span>
+            <span class="text-brand-cyan font-bold">✓</span>
             <div>
               <strong class="text-white">Adaptación de Casos de Estudio:</strong>
               <p class="text-[11px] text-slate-400">Para enfocar los ejemplos de IA en la especialidad predominante de tu despacho o consultora.</p>
             </div>
           </div>
           <div class="flex items-start gap-2">
-            <span class="text-brand-green font-bold">✓</span>
+            <span class="text-brand-cyan font-bold">✓</span>
             <div>
               <strong class="text-white">Entrega de Materiales y Certificado:</strong>
               <p class="text-[11px] text-slate-400">Envío posterior de memorias, grabaciones y certificado de asistencia.</p>
@@ -551,8 +538,8 @@
           </div>
         </div>
 
-        <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
-          <span>Para consultas, rectificación o revocatoria de datos: <strong class="text-brand-cyan font-mono">epartnerclass@gmail.com</strong></span>
+        <div class="pt-3 border-t border-navy-700 text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
+          <span>Para consultas, rectificación o revocatoria de datos: <strong class="text-brand-gold font-mono">epartnerclass@gmail.com</strong></span>
           <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="text-brand-cyan hover:underline font-semibold">
             Leer términos legales completos →
           </button>
@@ -565,11 +552,11 @@
   <!-- ==========================================================================
        MODAL INTERACTIVO: POLÍTICA COMPLETA DE TRATAMIENTO DE DATOS
        ========================================================================== -->
-  <div id="privacy-modal" class="hidden fixed inset-0 bg-slate-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4">
+  <div id="privacy-modal" class="hidden fixed inset-0 bg-navy-950/85 backdrop-blur-md z-50 flex items-center justify-center p-4">
     <div class="glass-card max-w-2xl w-full p-6 sm:p-8 space-y-4 animate-bounce-pop border-2 border-brand-cyan max-h-[85vh] flex flex-col">
       
       <!-- Modal Header -->
-      <div class="flex items-center justify-between border-b border-slate-800 pb-3 flex-shrink-0">
+      <div class="flex items-center justify-between border-b border-navy-700 pb-3 flex-shrink-0">
         <div class="flex items-center gap-2.5">
           <div class="w-9 h-9 rounded-xl bg-brand-cyan/20 border border-brand-cyan/40 flex items-center justify-center text-brand-cyan text-lg">
             🛡️
@@ -588,7 +575,7 @@
         <div>
           <h4 class="font-bold text-white mb-1">1. Responsable del Tratamiento</h4>
           <p class="text-slate-400">
-            El responsable del tratamiento de los datos recolectados es <strong>e-Formación / VL Soluciones</strong> con la dirección académica de la <strong>Esp. Maria Esther Espinoza</strong>. Canal de contacto oficial: <strong class="text-white font-mono">epartnerclass@gmail.com</strong>.
+            El responsable del tratamiento de los datos recolectados es <strong>e-Formación / VL Soluciones</strong> con la dirección académica de la <strong>Esp. Maria Esther Espinoza</strong>. Canal de contacto oficial: <strong class="text-brand-gold font-mono">epartnerclass@gmail.com</strong>.
           </p>
         </div>
 
@@ -626,14 +613,14 @@
         <div>
           <h4 class="font-bold text-white mb-1">6. Derechos del Titular (Derechos ARCO)</h4>
           <p class="text-slate-400">
-            Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento, así como a revocar la autorización de tratamiento otorgada, mediante correo electrónico dirigido a <strong class="text-white font-mono">epartnerclass@gmail.com</strong> con el asunto «Ejercicio de Derechos Habeas Data».
+            Usted tiene derecho a conocer, actualizar, rectificar y suprimir sus datos en cualquier momento, así como a revocar la autorización de tratamiento otorgada, mediante correo electrónico dirigido a <strong class="text-brand-gold font-mono">epartnerclass@gmail.com</strong> con el asunto «Ejercicio de Derechos Habeas Data».
           </p>
         </div>
 
       </div>
 
       <!-- Modal Footer -->
-      <div class="border-t border-slate-800 pt-3 flex items-center justify-end flex-shrink-0">
+      <div class="border-t border-navy-700 pt-3 flex items-center justify-end flex-shrink-0">
         <button type="button" onclick="document.getElementById('privacy-modal').classList.add('hidden')" class="btn-primary text-xs py-2.5 px-6 font-bold">
           Entendido y Aceptado
         </button>
@@ -643,9 +630,9 @@
   </div>
 
   <!-- ==========================================================================
-       FOOTER
+       FOOTER CORPORATIVO
        ========================================================================== -->
-  <footer class="bg-slate-900/90 border-t border-slate-800 py-6 px-4 text-center text-xs text-slate-400">
+  <footer class="bg-navy-900/95 border-t border-navy-700 py-6 px-4 text-center text-xs text-slate-400">
     <div class="max-w-6xl mx-auto space-y-3">
       <div class="flex flex-wrap items-center justify-center gap-4 text-[11px] text-slate-400">
         <button type="button" onclick="document.getElementById('privacy-modal').classList.remove('hidden')" class="hover:text-brand-cyan transition-colors underline">
@@ -656,11 +643,11 @@
           Plataforma e-Formación
         </a>
         <span>•</span>
-        <a href="mailto:epartnerclass@gmail.com" class="hover:text-brand-cyan transition-colors">
+        <a href="mailto:epartnerclass@gmail.com" class="hover:text-brand-gold transition-colors font-mono">
           Contacto: epartnerclass@gmail.com
         </a>
         <span>•</span>
-        <a href="index.html" class="hover:text-brand-green transition-colors">
+        <a href="index.html" class="hover:text-brand-cyan transition-colors">
           App Del chat al Agente: Go
         </a>
       </div>

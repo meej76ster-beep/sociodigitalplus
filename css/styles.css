@@ -394,16 +394,16 @@ h1, h2, h3, h4, h5, h6 {
    WEBINAR & REGISTRATION FORM STYLES
    ========================================================================== */
 .webinar-gradient-bg {
-  background-color: #090d16;
+  background-color: #070D1B;
   background-image: 
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 174, 239, 0.18), transparent),
-    radial-gradient(ellipse 60% 50% at 95% 30%, rgba(118, 188, 33, 0.12), transparent),
-    radial-gradient(ellipse 60% 50% at 5% 70%, rgba(0, 174, 239, 0.12), transparent);
+    radial-gradient(ellipse 90% 60% at 50% -10%, rgba(0, 174, 239, 0.16), transparent),
+    radial-gradient(ellipse 70% 50% at 95% 35%, rgba(217, 119, 6, 0.10), transparent),
+    radial-gradient(ellipse 70% 50% at 5% 65%, rgba(0, 174, 239, 0.10), transparent);
   background-attachment: fixed;
 }
 
 .webinar-badge-glow {
-  box-shadow: 0 0 25px rgba(118, 188, 33, 0.25), 0 0 50px rgba(0, 174, 239, 0.15);
+  box-shadow: 0 0 25px rgba(0, 174, 239, 0.25), 0 0 50px rgba(217, 119, 6, 0.15);
 }
 
 /* Tag Chips */
