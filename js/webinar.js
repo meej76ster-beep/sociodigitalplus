@@ -30,6 +30,9 @@ class WebinarManager {
     this.bindEvents();
     this.startCountdownTimer();
     this.updateLivePreview();
+    if (this.isAlreadyRegistered && this.formData.ticketId) {
+      this.showConfirmationView(false);
+    }
   }
 
   checkExistingRegistration() {
@@ -46,9 +49,23 @@ class WebinarManager {
 
     if (window.authManager) {
       const user = window.authManager.getUser();
-      if (user && !this.formData.fullName) {
-        this.formData.fullName = user.name || "";
-        this.formData.email = user.email || "";
+      if (user) {
+        if (!this.formData.fullName) this.formData.fullName = user.name || "";
+        if (!this.formData.email) this.formData.email = user.email || "";
+        if (user.country) this.formData.country = user.country;
+        if (user.institution) this.formData.institution = user.institution;
+        if (user.specialty) this.formData.educationLevel = user.specialty;
+        if (user.role) this.formData.teacherRole = user.role;
+
+        const headerUser = document.getElementById("webinar-header-user");
+        if (headerUser) {
+          headerUser.innerHTML = `
+            <a href="index.html" class="flex items-center gap-2 bg-navy-800/90 border border-brand-cyan/40 rounded-full px-3 py-1 text-xs hover:border-brand-green transition-colors">
+              <img src="${user.photo}" class="w-5 h-5 rounded-full object-cover border border-brand-cyan" alt="${user.name}"/>
+              <span class="font-semibold text-white truncate max-w-[120px]">${user.name}</span>
+            </a>
+          `;
+        }
       }
     }
   }
@@ -171,25 +188,45 @@ class WebinarManager {
 
     localStorage.setItem("sociodigital_firmas_webinar_registration", JSON.stringify(this.formData));
 
-    if (window.dbManager && window.authManager) {
-      const user = window.authManager.getUser();
-      if (user) {
-        window.dbManager.saveWebinarRegistration(user.id, this.formData);
+    if (window.authManager && window.dbManager) {
+      let user = window.authManager.getUser();
+      if (!user) {
+        user = {
+          id: `student_${Date.now()}`,
+          name: this.formData.fullName,
+          email: this.formData.email,
+          country: this.formData.country,
+          institution: this.formData.institution,
+          specialty: this.formData.educationLevel,
+          role: this.formData.teacherRole,
+          photo: `https://ui-avatars.com/api/?name=${encodeURIComponent(this.formData.fullName)}&background=00AEEF&color=fff`,
+          createdAt: new Date().toISOString(),
+          lastLogin: new Date().toISOString(),
+          accessType: "free"
+        };
+        window.authManager.saveUser(user);
+        window.dbManager.saveStudent(user);
       }
+      window.dbManager.saveWebinarRegistration(user.id, this.formData);
     }
 
-    // Transición visual limpia a la vista de confirmación
+    this.showConfirmationView(true);
+    this.triggerConfetti();
+  }
+
+  showConfirmationView(scroll = true) {
     const formCard = document.getElementById("webinar-form-container");
     const confirmCard = document.getElementById("webinar-step-confirmation");
 
     if (formCard) formCard.classList.add("hidden");
     if (confirmCard) {
       confirmCard.classList.remove("hidden");
-      confirmCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (scroll) {
+        confirmCard.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
 
     this.renderTicketDetails();
-    this.triggerConfetti();
   }
 
   updateLivePreview() {

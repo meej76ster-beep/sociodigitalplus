@@ -8,14 +8,17 @@
   },
   "users": [
     {
-      "id": "demo-user-1",
-      "email": "estudiante@mariaestherespinoza.com",
-      "fullName": "Estudiante Digital",
-      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
-      "institution": "Firma Profesional Demo",
-      "specialty": "Legal & Contable con IA",
-      "role": "Consultor / Abogado",
+      "id": "student_demo_101",
+      "email": "alejandro@silva-abogados.com",
+      "fullName": "Dr. Alejandro Silva",
+      "avatarUrl": "https://ui-avatars.com/api/?name=Alejandro+Silva&background=00AEEF&color=fff",
+      "institution": "Silva & Asociados Abogados",
+      "specialty": "Firma Conjunta (Legal + Contable)",
+      "role": "Socio / Titular de Firma",
+      "country": "🇨🇴 Colombia",
       "isPremium": false,
+      "webinarRegistered": true,
+      "webinarTicketId": "SD-FIRMAS-2026-1001",
       "createdAt": "2026-10-19T18:00:00Z"
     }
   ],
